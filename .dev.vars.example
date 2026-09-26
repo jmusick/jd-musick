@@ -4,13 +4,13 @@
 CLOUDFLARE_API_TOKEN=
 
 # Optional locally because wrangler.toml supplies the account ID.
-CLOUDFLARE_ACCOUNT_ID=fdabb6996edf7688fdaf7c8c367f7d08
+CLOUDFLARE_ACCOUNT_ID=your-account-id
 
 # The sender must belong to a connected and verified Email Sending domain.
-EMAIL_FROM_CONTACT=contact@jdmusick.band
+EMAIL_FROM_CONTACT=contact@example.com
 
 # The inbox that receives form messages.
-CONTACT_TO_EMAIL=StoneDragonMedia@gmail.com
+CONTACT_TO_EMAIL=you@example.com
 
 # Server-side secret for the Turnstile widget whose public key is provided at
 # build time through PUBLIC_TURNSTILE_SITE_KEY.

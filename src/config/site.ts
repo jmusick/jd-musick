@@ -25,9 +25,9 @@ export const TURNSTILE_SITE_KEY: string =
 /**
  * Social and streaming profiles.
  *
- * Nothing is released yet, so every entry is `href: null`. The header and
- * footer skip null entries entirely, so the site renders clean today and
- * lights up the moment a URL is pasted in.
+ * Spotify and Apple Music are live; the rest stay `href: null` until their
+ * real URLs are known. The header, footer and Music page skip null entries
+ * entirely, so a profile lights up the moment a URL is pasted in.
  */
 export interface SocialLink {
 	label: string;

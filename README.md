@@ -41,6 +41,17 @@ repository deploys automatically, or a local build can be published with:
 npx wrangler pages deploy dist --project-name jdmusick
 ```
 
+## Security headers and share image
+
+[`public/_headers`](public/_headers) applies a CSP, HSTS, `X-Frame-Options`,
+`nosniff`, `Referrer-Policy`, COOP and `Permissions-Policy` to every route
+through Cloudflare Pages. The CSP allows only Google Fonts, Cloudflare Turnstile
+and the Spotify embed; add any new third-party origin there. After a deploy,
+check with `curl -I https://jdmusick.band/`.
+
+`public/og.png` (1200×630, built from the album cover) is the default Open Graph
+and Twitter card image on every page. Replace the file to change it.
+
 ## Contact form
 
 `POST /api/contact` is the site's only server-side route. The Cloudflare Pages

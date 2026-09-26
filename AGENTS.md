@@ -31,6 +31,9 @@ server-side route. Read `README.md` before changing visual styling or public cop
 - `src/data/album.ts` — album/track data for `The Road Still Knows`. Track order,
   durations, and release date here are the single source for the Music page;
   don't hardcode track info in components.
+- `public/` — static assets served as-is: `universal.css`, `favicon.svg`,
+  `robots.txt`, `og.png` (1200×630 default share image) and `_headers`
+  (security headers).
 - `functions/api/contact.ts` — the only server-side code. It validates Contact
   page submissions, verifies Turnstile, and uses Cloudflare Email Sending.
 
@@ -58,6 +61,21 @@ and, for anything visual, `npm run dev` + a browser check.
 - `astro.config.mjs` `site`, `src/config/site.ts` `SITE_URL`, and
   `public/robots.txt`'s `Sitemap:` line must all point at `jdmusick.band`.
 
+## Security headers and share image
+
+- `public/_headers` sets the CSP, HSTS, `X-Frame-Options`, `nosniff`,
+  `Referrer-Policy`, COOP and `Permissions-Policy` for every route. Its CSP is an
+  allowlist: when adding a third-party origin (fonts, embeds, scripts, API
+  calls), add it to the matching directive or the browser will silently block it.
+  Current origins: `fonts.googleapis.com` / `fonts.gstatic.com` (fonts),
+  `challenges.cloudflare.com` (Turnstile), `open.spotify.com` (album embed).
+- `script-src`/`style-src` keep `'unsafe-inline'` because Astro inlines small
+  scripts and styles. The Spotify iframe is sandboxed; retest playback if you
+  change its `sandbox` or `allow` attributes.
+- `Layout.astro` defaults `socialImageUrl` to `${SITE_URL}/og.png` and emits
+  `og:image` / `twitter:image` on every page. Pages may override it; don't make
+  it conditional again.
+
 ## Contact form and email
 
 - Mail uses Cloudflare Email Sending's REST API. The token must have
@@ -66,7 +84,7 @@ and, for anything visual, `npm run dev` + a browser check.
   in the API's top-level snake_case `reply_to` field; `replyTo` is invalid.
 - Treat success as `data.success`, not merely an HTTP 2xx response.
 - `CLOUDFLARE_ACCOUNT_ID` is plaintext in `wrangler.toml`. The API token and
-  `TURNSTILE_SECRET_KEY` are Pages secrets and must never be committed.
+  `TURNSTILE_SECRET` are Pages secrets and must never be committed.
 - The public Turnstile site key is supplied through
   `PUBLIC_TURNSTILE_SITE_KEY` at build time.
   `astro dev` uses Cloudflare's test key, but does not serve the Function; use
