@@ -21,7 +21,7 @@ server-side route. Read `README.md` before changing visual styling or public cop
 ## Structure
 
 - `src/pages/` — routes (`index.astro`, `about.astro`, `music.astro`,
-  `contact.astro`, `privacy-policy.astro`).
+  `contact.astro`, `privacy-policy.astro`, `404.astro`).
 - `src/components/` — `SiteHeader.astro`, `SiteFooter.astro`.
 - `src/layouts/Layout.astro` — shared page shell.
 - `src/config/site.ts` — single source of truth for site URL, name, tagline,

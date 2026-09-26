@@ -1,0 +1,23 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { SITE_NAME, SITE_URL } from "../config/site";
+---
+
+<Layout
+	title={`Page not found — ${SITE_NAME}`}
+	description="That page doesn't exist. Head back to the music."
+	canonicalUrl={`${SITE_URL}/`}
+	robots="noindex,follow"
+>
+	<div class="page">
+		<p class="eyebrow">404</p>
+		<h1 style="margin-top: var(--space-3)">Page not found</h1>
+		<p class="lede" style="margin-top: var(--space-4)">
+			This road doesn't lead anywhere. The page you're looking for may have moved or never existed.
+		</p>
+		<div class="hero-cta">
+			<a class="btn btn-primary" href="/">Back home</a>
+			<a class="btn btn-secondary" href="/music/">Listen to the album</a>
+		</div>
+	</div>
+</Layout>
