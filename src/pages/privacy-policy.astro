@@ -3,7 +3,7 @@ import Layout from "../layouts/Layout.astro";
 import { CONTACT_EMAIL, SITE_NAME, SITE_URL } from "../config/site";
 
 const canonicalUrl = `${SITE_URL}/privacy-policy/`;
-const lastUpdated = "September 15, 2026";
+const lastUpdated = "October 12, 2026";
 ---
 
 <Layout
@@ -50,8 +50,10 @@ const lastUpdated = "September 15, 2026";
 					When you send the <a href="/contact/">contact form</a>, Cloudflare Turnstile
 					checks the submission for automated abuse. Cloudflare receives your IP address
 					and technical signals from your browser for that check. The form contents are
-					then sent through Cloudflare Email Sending to the site's inbox and kept only as
-					long as needed for the resulting correspondence.
+					then sent through Cloudflare Email Sending to an email inbox hosted by Google
+					(Gmail). The site does not keep the message in a website database. The copy
+					in that inbox stays there until the site owner manually deletes it; there is
+					no fixed retention schedule.
 				</p>
 			</section>
 
@@ -83,21 +85,27 @@ const lastUpdated = "September 15, 2026";
 						<a href="https://www.cloudflare.com/privacypolicy/" target="_blank" rel="noopener noreferrer">Cloudflare Privacy Policy</a>.
 					</li>
 					<li>
-						<strong>Google Fonts</strong> is used to load the site's typefaces (Roboto Slab,
-						Libre Franklin, and Barlow Condensed). Google may log requests made to its font
-						servers, including IP address. See the
+						<strong>Google Fonts</strong> is used to load the site's typefaces (Bebas Neue,
+						Barlow Condensed, Libre Franklin, and Roboto Slab). Google may log requests
+						made to its font servers, including IP address. See the
 						<a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google Privacy Policy</a>.
 					</li>
 					<li>
-						<strong>Spotify</strong> — the homepage embeds a Spotify album player so
-						you can preview the record without leaving the site, and we link to our
-						Spotify artist profile elsewhere. Spotify's embedded player may set its own
-						cookies and collect usage data once you interact with it. See the
+						<strong>Google Gmail</strong> — the contact form's messages are delivered to
+						an inbox hosted by Google. See the
+						<a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google Privacy Policy</a>.
+					</li>
+					<li>
+						<strong>Spotify</strong> — the homepage embeds a Spotify album player in a
+						sandboxed frame. The frame is set to load lazily, so it loads as it nears
+						your screen rather than when you click play. Loading it connects your
+						browser to Spotify, whose privacy policy applies to the player. Other pages
+						link to the album on Spotify. See the
 						<a href="https://www.spotify.com/legal/privacy-policy/" target="_blank" rel="noopener noreferrer">Spotify Privacy Policy</a>.
 					</li>
 					<li>
-						<strong>Apple Music</strong> — we link to our Apple Music artist profile.
-						Apple may collect data if you visit their platform. See the
+						<strong>Apple Music</strong> — we link to the album on Apple Music. Apple's
+						privacy policy applies if you follow that link. See the
 						<a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener noreferrer">Apple Privacy Policy</a>.
 					</li>
 				</ul>
@@ -109,8 +117,8 @@ const lastUpdated = "September 15, 2026";
 				<h2>Cookies</h2>
 				<p class="lede">
 					This site does not set advertising or analytics cookies. The embedded Spotify
-					player may set its own cookies once you interact with it, subject to Spotify's
-					privacy policy above. Cloudflare may use strictly necessary storage while
+					player is Spotify's service, and its cookies and storage are subject to
+					Spotify's privacy policy above. Cloudflare may use strictly necessary storage while
 					protecting the contact form. You can control or delete cookies through your
 					browser settings.
 				</p>
