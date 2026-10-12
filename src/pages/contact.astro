@@ -50,7 +50,7 @@ const functionUnavailable = import.meta.env.DEV;
 
 				<div class="field">
 					<label for="cf-email">Email</label>
-					<input id="cf-email" name="email" type="email" required autocomplete="email" />
+					<input id="cf-email" name="email" type="email" maxlength="254" required autocomplete="email" />
 					<span class="field-hint">Used only to reply to your message.</span>
 				</div>
 
@@ -137,10 +137,22 @@ const functionUnavailable = import.meta.env.DEV;
 		const status = document.getElementById("cf-status");
 		const submit = document.getElementById("cf-submit") as HTMLButtonElement | null;
 
+		/**
+		 * Longer than the Function's own deadlines (10 s Siteverify + 10 s Email
+		 * Sending), so a server-side timeout normally arrives first.
+		 */
+		const REQUEST_DEADLINE_MS = 25_000;
+
 		if (form && status && submit) {
+			let pendingStatus: number | undefined;
 			const setStatus = (text: string, state: "" | "ok" | "error") => {
-				status.textContent = text;
+				// Clear first so repeating the same message is announced again.
+				window.clearTimeout(pendingStatus);
+				status.textContent = "";
 				status.dataset.state = state;
+				pendingStatus = window.setTimeout(() => {
+					status.textContent = text;
+				}, 50);
 			};
 
 			form.addEventListener("submit", async (event) => {
@@ -161,9 +173,13 @@ const functionUnavailable = import.meta.env.DEV;
 				submit.disabled = true;
 				setStatus("Sending…", "");
 
+				const controller = new AbortController();
+				const deadline = window.setTimeout(() => controller.abort(), REQUEST_DEADLINE_MS);
+
 				try {
 					const response = await fetch("/api/contact", {
 						method: "POST",
+						signal: controller.signal,
 						headers: { "Content-Type": "application/json" },
 						body: JSON.stringify({
 							name: data.get("name"),
@@ -180,9 +196,12 @@ const functionUnavailable = import.meta.env.DEV;
 						| null;
 
 					if (!response.ok) {
-						setStatus(result?.error ?? "Something went wrong. Please try again.", "error");
+						const fallback =
+							response.status === 429
+								? "Too many attempts. Please wait a minute and try again."
+								: "Something went wrong. Please try again.";
+						setStatus(result?.error ?? fallback, "error");
 						window.turnstile?.reset();
-						submit.disabled = false;
 						return;
 					}
 
@@ -190,9 +209,17 @@ const functionUnavailable = import.meta.env.DEV;
 					window.turnstile?.reset();
 					setStatus(result?.message ?? "Thanks — your message has been sent.", "ok");
 				} catch {
-					setStatus("Could not reach the server. Please try again in a moment.", "error");
+					// Keep the form contents so the visitor can retry. A timed-out request
+					// may still have been delivered, so say so rather than resending.
+					setStatus(
+						controller.signal.aborted
+							? "The server took too long to respond, so your message may not have been sent. Please wait a moment and try again."
+							: "Could not reach the server. Please try again in a moment.",
+						"error",
+					);
 					window.turnstile?.reset();
 				} finally {
+					window.clearTimeout(deadline);
 					submit.disabled = false;
 				}
 			});
