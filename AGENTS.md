@@ -10,11 +10,15 @@ server-side route. Read `README.md` before changing visual styling or public cop
 
 ## Stack
 
-- **Astro** (static output), TypeScript, no UI framework — components are
-  `.astro` files with inline `<style>`/`<script>`.
+- **Astro 7** (static output), TypeScript, no UI framework — components are
+  `.astro` files with inline `<style>`/`<script>`. `compressHTML: true` in
+  `astro.config.mjs` is deliberate: Astro 7's default `'jsx'` whitespace rules
+  drop the space before inline links in body copy.
 - Styling is hand-written CSS. Design tokens and shared component styles live
   in `public/universal.css`.
-- Icons via `astro-icon` + `@iconify-json/simple-icons` / `lucide`.
+- Icons via `astro-icon` + `@iconify-json/simple-icons` / `lucide`. Local SVG
+  icons go in `src/icons/` (kept with `.gitkeep`; astro-icon warns and skips
+  icon type generation if the directory is missing).
 - Deploy target: Cloudflare Pages project `jdmusick` via `wrangler.toml`
   (`npx wrangler pages deploy dist`).
 
@@ -51,7 +55,17 @@ npm run dev       # astro dev, http://localhost:4321
 npm run build     # astro build -> dist/
 npm run preview   # serve the built output
 npm run build && npx wrangler pages dev dist  # include Pages Functions
+npm run audit:deps  # npm audit --audit-level=high; fails on high/critical
 ```
+
+Astro 7 starts `astro dev` as a detached background process when it detects an
+AI coding agent; manage it with `npx astro dev status|logs|stop`, or set
+`ASTRO_DEV_BACKGROUND=0` to keep it in the foreground.
+
+`audit:deps` audits the whole tree, including devDependencies: on this static
+site every package is build tooling, so the dev/prod split is not a deployment
+boundary. Moderate and low findings print without failing; triage them by
+reachability as in `docs/audits/2026-10-12/dependency-triage.md`.
 
 No test suite or linter is configured. Verify changes with `npm run build`
 and, for anything visual, `npm run dev` + a browser check.

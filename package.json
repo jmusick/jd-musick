@@ -9,14 +9,15 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "audit:deps": "npm audit --audit-level=high"
   },
   "dependencies": {
-    "@astrojs/sitemap": "^3.7.2",
+    "@astrojs/sitemap": "^3.7.4",
     "@iconify-json/lucide": "^1.2.105",
     "@iconify-json/simple-icons": "^1.2.81",
-    "astro": "^6.2.2",
-    "astro-icon": "^1.1.5"
+    "astro": "^7.3.8",
+    "astro-icon": "^1.2.0"
   },
   "devDependencies": {
     "@cloudflare/workers-types": "^5.20260816.1",
