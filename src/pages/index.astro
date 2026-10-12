@@ -3,24 +3,15 @@ import { Image } from "astro:assets";
 import Layout from "../layouts/Layout.astro";
 import cover from "../assets/the-road-still-knows-cover.png";
 import { ALBUM, ALBUM_RUNTIME, TRACK_COUNT } from "../data/album";
-import { SITE_NAME, SITE_TAGLINE, SITE_URL } from "../config/site";
+import { SITE_GENRE_PHRASE, SITE_NAME, SITE_TAGLINE, SITE_URL } from "../config/site";
+import { albumRef, artistEntity } from "../lib/structured-data";
 
 const canonicalUrl = `${SITE_URL}/`;
 
-const structuredData = {
-	"@context": "https://schema.org",
-	"@type": "MusicGroup",
-	name: SITE_NAME,
-	url: SITE_URL,
-	genre: ["Electric blues", "Soul blues"],
-	description: SITE_TAGLINE,
-	album: {
-		"@type": "MusicAlbum",
-		name: ALBUM.title,
-		numTracks: TRACK_COUNT,
-		byArtist: { "@type": "MusicGroup", name: SITE_NAME },
-	},
-};
+const structuredData = { ...artistEntity(), album: albumRef };
+
+const title = `${SITE_NAME} — ${ALBUM.title} | Electric Blues & Soul`;
+const description = `${SITE_NAME} is an ${SITE_GENRE_PHRASE} artist. Hear the debut album ${ALBUM.title}, ${ALBUM.status.toLowerCase()}: ${TRACK_COUNT} songs, ${ALBUM_RUNTIME} of late-night stories.`;
 
 const spotifyAlbumId = ALBUM.spotifyUrl.match(/open\.spotify\.com\/album\/([A-Za-z0-9]+)/)?.[1];
 const spotifyEmbedUrl = `https://open.spotify.com/embed/album/${spotifyAlbumId}?utm_source=generator&theme=0`;
@@ -28,14 +19,14 @@ const spotifyEmbedHeight = Math.min(760, Math.max(352, 170 + ALBUM.tracks.length
 ---
 
 <Layout
-	title={`${SITE_NAME} — ${ALBUM.title}`}
-	description={ALBUM.blurb}
+	title={title}
+	description={description}
 	canonicalUrl={canonicalUrl}
 	structuredData={structuredData}
 	active="home"
 >
 	<section class="hero">
-		<Image class="hero-art" src={cover} alt="" widths={[900, 1600]} loading="eager" />
+		<Image class="hero-art" src={cover} alt="" widths={[900, 1600]} sizes="100vw" loading="eager" />
 		<div class="hero-scrim" aria-hidden="true"></div>
 
 		<div class="hero-inner">

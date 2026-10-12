@@ -51,3 +51,20 @@ export const ALBUM_RUNTIME = (() => {
 	const minutes = Math.round((seconds % 3600) / 60);
 	return hours ? `${hours}h ${minutes}m` : `${minutes}m`;
 })();
+
+/** "5:42" -> "PT5M42S" (ISO 8601 duration, for structured data). */
+export function toIsoDuration(duration: string): string {
+	const [m, s] = duration.split(":").map(Number);
+	return `PT${m}M${s}S`;
+}
+
+/** Long-form release date ("September 4, 2026"), or null while unannounced. */
+export function formatReleaseDate(): string | null {
+	return ALBUM.releaseDate
+		? new Date(`${ALBUM.releaseDate}T00:00:00`).toLocaleDateString("en-US", {
+				year: "numeric",
+				month: "long",
+				day: "numeric",
+			})
+		: null;
+}

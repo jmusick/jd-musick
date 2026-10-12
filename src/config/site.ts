@@ -11,6 +11,9 @@ export const SITE_VERSION: string = pkg.version;
 export const SITE_URL = "https://jdmusick.band";
 export const SITE_NAME = "JD Musick";
 export const SITE_TAGLINE = "Electric blues, soul, and stories that stay after last call.";
+/** Genre phrase for prose, and the matching schema.org genre values. */
+export const SITE_GENRE_PHRASE = "electric blues and soul";
+export const SITE_GENRES = ["Electric blues", "Soul blues"];
 
 /**
  * Cloudflare Turnstile site key for the contact form. The key is public by
@@ -33,11 +36,17 @@ export interface SocialLink {
 	label: string;
 	href: string | null;
 	icon: string;
+	/**
+	 * What the link points at. "album" links (streaming releases) are exposed
+	 * as the album's sameAs in structured data; "profile" links belong to the
+	 * artist. Defaults to "profile".
+	 */
+	target?: "album" | "profile";
 }
 
 export const SOCIALS: SocialLink[] = [
-	{ label: "Spotify", href: "https://open.spotify.com/album/1af7jVOhvyLZJTOLxoX3rx", icon: "simple-icons:spotify" },
-	{ label: "Apple Music", href: "https://music.apple.com/us/album/the-road-still-knows/6806432947", icon: "simple-icons:applemusic" },
+	{ label: "Spotify", href: "https://open.spotify.com/album/1af7jVOhvyLZJTOLxoX3rx", icon: "simple-icons:spotify", target: "album" },
+	{ label: "Apple Music", href: "https://music.apple.com/us/album/the-road-still-knows/6806432947", icon: "simple-icons:applemusic", target: "album" },
 	{ label: "YouTube", href: null, icon: "simple-icons:youtube" },
 	{ label: "SoundCloud", href: null, icon: "simple-icons:soundcloud" },
 	{ label: "Instagram", href: null, icon: "simple-icons:instagram" },

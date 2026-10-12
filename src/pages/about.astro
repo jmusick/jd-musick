@@ -2,6 +2,7 @@
 import Layout from "../layouts/Layout.astro";
 import { ALBUM, TRACK_COUNT } from "../data/album";
 import { ACTIVE_SOCIALS, SITE_NAME, SITE_URL } from "../config/site";
+import { albumRef, artistEntity } from "../lib/structured-data";
 
 const canonicalUrl = `${SITE_URL}/about/`;
 
@@ -15,14 +16,7 @@ const bio = [
 	`The debut album, ${ALBUM.title}, gathers ${TRACK_COUNT} songs about regret, self-reckoning, reassurance, and the kind of love that arrives after you have stopped expecting it.`,
 ];
 
-const structuredData = {
-	"@context": "https://schema.org",
-	"@type": "MusicGroup",
-	name: SITE_NAME,
-	url: SITE_URL,
-	genre: ["Electric blues", "Soul blues"],
-	description: bio[0],
-};
+const structuredData = { ...artistEntity(bio[0]), album: albumRef };
 ---
 
 <Layout
