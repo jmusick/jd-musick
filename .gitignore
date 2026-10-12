@@ -44,3 +44,6 @@ Thumbs.db
 
 # Local working checklist (audit findings) — not a deliverable
 TODO.md
+
+# Claude Code agent worktrees
+.claude/worktrees/
