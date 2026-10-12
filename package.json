@@ -1,7 +1,7 @@
 {
   "name": "jd-musick",
   "type": "module",
-  "version": "1.1.4",
+  "version": "1.2.0",
   "engines": {
     "node": ">=22.12.0"
   },
