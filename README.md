@@ -69,6 +69,17 @@ and Twitter card image on every page. Replace the file to change it.
 Function in [`functions/api/contact.ts`](functions/api/contact.ts) verifies
 Turnstile and sends messages through the Cloudflare Email Sending REST API.
 
+The Function accepts only `application/json` bodies (415 otherwise). Bodies
+over 32 KiB get 413, whatever `Content-Length` says. Anything that isn't a
+JSON object with string fields gets 400. Email addresses may be at most 254
+octets, with at most 64 in the local part. Siteverify and Email Sending each
+have a 10-second deadline, and a timeout returns a retryable 504. The
+browser gives up after 25 seconds and asks the visitor to retry. Every
+response sets the API security headers. Logs are single-line JSON events
+with no visitor data. [docs/operations.md](docs/operations.md) covers the
+limits, log format, verified Cloudflare settings and the rate-limiting rule
+the owner still needs to configure.
+
 Production configuration:
 
 | Location | Type | Name |

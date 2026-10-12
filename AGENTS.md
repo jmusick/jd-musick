@@ -23,8 +23,8 @@ server-side route. Read `README.md` before changing visual styling or public cop
 - This checkout (`C:\Users\JD\source\jd-musick`) owns website code and
   versioned Markdown guidance. Keep original media in the separate working
   project, `C:\Users\JD\projects\jd-musick`; see `docs/assets.md`.
-- `docs/` — website/asset workflow documentation and dated audit evidence in
-  `docs/audits/`. Actionable audit findings are tracked in GitHub Issues with
+- `docs/` — website/asset workflow documentation, contact endpoint operations
+  (`docs/operations.md`) and dated audit evidence in `docs/audits/`. Actionable audit findings are tracked in GitHub Issues with
   category and priority labels.
 
 - `src/pages/` — routes (`index.astro`, `about.astro`, `music.astro`,
@@ -101,6 +101,21 @@ and, for anything visual, `npm run dev` + a browser check.
 - Keep `from` on the connected and verified domain. Put the visitor's address
   in the API's top-level snake_case `reply_to` field; `replyTo` is invalid.
 - Treat success as `data.success`, not merely an HTTP 2xx response.
+- Return every response through the `json()` helper so the API security
+  headers and `no-store` stay on all statuses. Do not add CORS headers.
+- Keep the stream-read 32 KiB body cap (413), the JSON-only content type
+  (415), object/string-field validation and the 254/64-octet email bounds. If
+  you change a field limit, update the `maxlength` in `contact.astro` and
+  check that the body cap still has headroom.
+- Every upstream `fetch` goes through `withDeadline` (Siteverify and Email
+  Sending: 10 s each). The client deadline in `contact.astro` (25 s) must stay
+  longer than their sum. Never resend after an email timeout, because delivery
+  may already have happened.
+- Log only through `log()`. Events carry the operation, outcome, statuses, a
+  sanitized code and a request ID. Never log names, emails, subjects,
+  messages, tokens, IP addresses or raw upstream text.
+- `docs/operations.md` records limits, log format and the verified and
+  recommended Cloudflare rate-limit and alert settings. Keep it current.
 - `CLOUDFLARE_ACCOUNT_ID` is plaintext in `wrangler.toml`. The API token and
   `TURNSTILE_SECRET` are Pages secrets and must never be committed.
 - The public production Turnstile site key has a committed fallback in
