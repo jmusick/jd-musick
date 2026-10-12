@@ -20,6 +20,13 @@ server-side route. Read `README.md` before changing visual styling or public cop
 
 ## Structure
 
+- This checkout (`C:\Users\JD\source\jd-musick`) owns website code and
+  versioned Markdown guidance. Keep original media in the separate working
+  project, `C:\Users\JD\projects\jd-musick`; see `docs/assets.md`.
+- `docs/` — website/asset workflow documentation and dated audit evidence in
+  `docs/audits/`. Actionable audit findings are tracked in GitHub Issues with
+  category and priority labels.
+
 - `src/pages/` — routes (`index.astro`, `about.astro`, `music.astro`,
   `contact.astro`, `privacy-policy.astro`, `404.astro`).
 - `src/components/` — `SiteHeader.astro`, `SiteFooter.astro`.
@@ -51,6 +58,15 @@ and, for anything visual, `npm run dev` + a browser check.
 
 ## Conventions
 
+- Folders in the media working project use lowercase kebab-case:
+  `assets/albums/the-road-still-knows/audio/`, the sibling `artwork/`, and
+  `assets/brand/`. Preserve original master filenames unless a rename is
+  explicitly requested. Keep distribution artwork separate from web derivatives
+  in `src/assets/` and `public/`; do not copy WAV masters into the repository.
+- Put media format/provenance notes in the asset project's README files. Keep
+  build/deploy instructions and coding guidance here. Use `docs/assets.md` for
+  the boundary and handoff workflow, rather than duplicating album track data.
+
 - Keep the site static except for `POST /api/contact`; it is a Pages Function
   because the Email Sending token cannot ship to the browser. Do not add other
   server routes or client-side data fetching without an explicit requirement.
@@ -64,7 +80,9 @@ and, for anything visual, `npm run dev` + a browser check.
 ## Security headers and share image
 
 - `public/_headers` sets the CSP, HSTS, `X-Frame-Options`, `nosniff`,
-  `Referrer-Policy`, COOP and `Permissions-Policy` for every route. Its CSP is an
+  `Referrer-Policy`, COOP and `Permissions-Policy` for static routes. Pages
+  Functions must set appropriate response headers in code; `_headers` does not
+  apply to their responses. Its CSP is an
   allowlist: when adding a third-party origin (fonts, embeds, scripts, API
   calls), add it to the matching directive or the browser will silently block it.
   Current origins: `fonts.googleapis.com` / `fonts.gstatic.com` (fonts),
@@ -85,8 +103,9 @@ and, for anything visual, `npm run dev` + a browser check.
 - Treat success as `data.success`, not merely an HTTP 2xx response.
 - `CLOUDFLARE_ACCOUNT_ID` is plaintext in `wrangler.toml`. The API token and
   `TURNSTILE_SECRET` are Pages secrets and must never be committed.
-- The public Turnstile site key is supplied through
-  `PUBLIC_TURNSTILE_SITE_KEY` at build time.
+- The public production Turnstile site key has a committed fallback in
+  `src/config/site.ts`; `PUBLIC_TURNSTILE_SITE_KEY` optionally overrides it at
+  build time. It is public configuration, not a secret.
   `astro dev` uses Cloudflare's test key, but does not serve the Function; use
   a build with `wrangler pages dev dist` for end-to-end local tests.
 - Keep the contact-form data description in `privacy-policy.astro` accurate if

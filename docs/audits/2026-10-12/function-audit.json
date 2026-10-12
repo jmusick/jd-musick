@@ -1,0 +1,42 @@
+[
+  {
+    "name": "null",
+    "unhandled": "Cannot read properties of null (reading 'website')"
+  },
+  {
+    "name": "empty object",
+    "status": 400,
+    "body": {
+      "error": "Name, email, and message are required."
+    }
+  },
+  {
+    "name": "array",
+    "status": 400,
+    "body": {
+      "error": "Name, email, and message are required."
+    }
+  },
+  {
+    "name": "string",
+    "status": 400,
+    "body": {
+      "error": "Name, email, and message are required."
+    }
+  },
+  {
+    "name": "malformed",
+    "status": 400,
+    "body": {
+      "error": "Malformed request."
+    }
+  },
+  {
+    "name": "oversized email",
+    "status": 503,
+    "body": {
+      "error": "The contact form is not configured.",
+      "code": "turnstile_unconfigured"
+    }
+  }
+]

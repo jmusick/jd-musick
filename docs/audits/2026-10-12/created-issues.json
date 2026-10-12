@@ -1,0 +1,68 @@
+[
+  {
+    "category": "accessibility",
+    "priority": "p1",
+    "title": "[P1][Accessibility] Remove collapsed mobile navigation from keyboard focus",
+    "url": "https://github.com/jmusick/jd-musick/issues/1"
+  },
+  {
+    "category": "security",
+    "priority": "p2",
+    "title": "[P2][Security][A10] Handle invalid JSON shapes and bound email API requests",
+    "url": "https://github.com/jmusick/jd-musick/issues/2"
+  },
+  {
+    "category": "security",
+    "priority": "p2",
+    "title": "[P2][Security][A06] Bound contact payloads and verify abuse limits",
+    "url": "https://github.com/jmusick/jd-musick/issues/3"
+  },
+  {
+    "category": "security",
+    "priority": "p2",
+    "title": "[P2][Security][A03] Upgrade and triage vulnerable build dependencies",
+    "url": "https://github.com/jmusick/jd-musick/issues/4"
+  },
+  {
+    "category": "accessibility",
+    "priority": "p2",
+    "title": "[P2][Accessibility] Give inline links a visible cue beyond color",
+    "url": "https://github.com/jmusick/jd-musick/issues/5"
+  },
+  {
+    "category": "security",
+    "priority": "p3",
+    "title": "[P3][Security][A02] Set security headers on contact Function responses",
+    "url": "https://github.com/jmusick/jd-musick/issues/6"
+  },
+  {
+    "category": "security",
+    "priority": "p3",
+    "title": "[P3][Security][A09] Use bounded privacy-safe contact error logs",
+    "url": "https://github.com/jmusick/jd-musick/issues/7"
+  },
+  {
+    "category": "seo",
+    "priority": "p3",
+    "title": "[P3][SEO] Make album search metadata more descriptive",
+    "url": "https://github.com/jmusick/jd-musick/issues/8"
+  },
+  {
+    "category": "seo",
+    "priority": "p3",
+    "title": "[P3][SEO] Connect artist and album structured data with known release facts",
+    "url": "https://github.com/jmusick/jd-musick/issues/9"
+  },
+  {
+    "category": "seo",
+    "priority": "p3",
+    "title": "[P3][SEO] Add sizes hints to responsive album images",
+    "url": "https://github.com/jmusick/jd-musick/issues/10"
+  },
+  {
+    "category": "security",
+    "priority": "p3",
+    "title": "[P3][Security] Reconcile privacy disclosures with current third-party services",
+    "url": "https://github.com/jmusick/jd-musick/issues/11"
+  }
+]

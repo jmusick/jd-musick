@@ -1,0 +1,1484 @@
+{
+  "date": "2026-10-12",
+  "axeVersion": "4.14.0",
+  "pages": [
+    {
+      "origin": "https://jdmusick.band",
+      "route": "/",
+      "status": 200,
+      "errors": [],
+      "meta": {
+        "title": "JD Musick — The Road Still Knows",
+        "description": "Eleven late-night stories of regret, reckoning, reassurance, and hard-won love, carried by smoky guitar, warm organ, and a weathered voice.",
+        "canonical": "https://jdmusick.band/",
+        "robots": "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1",
+        "h1": [
+          "The Road Still Knows"
+        ],
+        "schema": [
+          {
+            "@context": "https://schema.org",
+            "@type": "MusicGroup",
+            "name": "JD Musick",
+            "url": "https://jdmusick.band",
+            "genre": [
+              "Electric blues",
+              "Soul blues"
+            ],
+            "description": "Electric blues, soul, and stories that stay after last call.",
+            "album": {
+              "@type": "MusicAlbum",
+              "name": "The Road Still Knows",
+              "numTracks": 11,
+              "byArtist": {
+                "@type": "MusicGroup",
+                "name": "JD Musick"
+              }
+            }
+          }
+        ],
+        "images": [
+          {
+            "src": "https://jdmusick.band/_astro/the-road-still-knows-cover.OWrUrXrd_1BXAF8.webp",
+            "width": 1280,
+            "naturalWidth": 1280,
+            "srcset": "/_astro/the-road-still-knows-cover.OWrUrXrd_ZO6rf4.webp 900w, /_astro/the-road-still-knows-cover.OWrUrXrd_1BXAF8.webp 1600w",
+            "sizes": "",
+            "alt": ""
+          }
+        ],
+        "internalLinks": [
+          "/",
+          "/",
+          "/",
+          "/music/",
+          "/about/",
+          "/contact/",
+          "/music/",
+          "/privacy-policy/"
+        ],
+        "inlineLinks": [],
+        "overflow": false
+      },
+      "axe": {
+        "violations": [],
+        "incomplete": [
+          {
+            "id": "color-contrast",
+            "nodes": 17
+          },
+          {
+            "id": "link-in-text-block",
+            "nodes": 1
+          }
+        ],
+        "passes": 20
+      },
+      "reflow": {
+        "width": 320,
+        "scrollWidth": 320,
+        "overflow": false
+      },
+      "mobileAxe": [],
+      "keyboard": [
+        {
+          "tag": "A",
+          "text": "Skip to content",
+          "label": null,
+          "href": "#main",
+          "rect": {
+            "top": 16,
+            "bottom": 64.796875,
+            "width": 160.984375,
+            "height": 48.796875
+          },
+          "menuOpacity": "0",
+          "expanded": "false"
+        },
+        {
+          "tag": "A",
+          "text": "JD MUSICK",
+          "label": "JD Musick — home",
+          "href": "/",
+          "rect": {
+            "top": 13.796875,
+            "bottom": 44.203125,
+            "width": 133.53125,
+            "height": 30.40625
+          },
+          "menuOpacity": "0",
+          "expanded": "false"
+        },
+        {
+          "tag": "BUTTON",
+          "text": "",
+          "label": "Toggle menu",
+          "href": null,
+          "rect": {
+            "top": 8,
+            "bottom": 50,
+            "width": 42,
+            "height": 42
+          },
+          "menuOpacity": "0",
+          "expanded": "false"
+        },
+        {
+          "tag": "A",
+          "text": "Home",
+          "label": null,
+          "href": "/",
+          "rect": {
+            "top": 66,
+            "bottom": 112.6875,
+            "width": 288,
+            "height": 46.6875
+          },
+          "menuOpacity": "0",
+          "expanded": "false"
+        },
+        {
+          "tag": "A",
+          "text": "Music",
+          "label": null,
+          "href": "/music/",
+          "rect": {
+            "top": 42.6875,
+            "bottom": 89.375,
+            "width": 288,
+            "height": 46.6875
+          },
+          "menuOpacity": "0",
+          "expanded": "false"
+        },
+        {
+          "tag": "A",
+          "text": "About",
+          "label": null,
+          "href": "/about/",
+          "rect": {
+            "top": 42.375,
+            "bottom": 89.0625,
+            "width": 288,
+            "height": 46.6875
+          },
+          "menuOpacity": "0",
+          "expanded": "false"
+        },
+        {
+          "tag": "A",
+          "text": "Contact",
+          "label": null,
+          "href": "/contact/",
+          "rect": {
+            "top": 43.0625,
+            "bottom": 89.75,
+            "width": 288,
+            "height": 46.6875
+          },
+          "menuOpacity": "0",
+          "expanded": "false"
+        },
+        {
+          "tag": "A",
+          "text": "",
+          "label": "Spotify",
+          "href": "https://open.spotify.com/album/1af7jVOhvyLZJTOLxoX3rx",
+          "rect": {
+            "top": 45.75,
+            "bottom": 85.75,
+            "width": 40,
+            "height": 40
+          },
+          "menuOpacity": "0",
+          "expanded": "false"
+        },
+        {
+          "tag": "A",
+          "text": "",
+          "label": "Apple Music",
+          "href": "https://music.apple.com/us/album/the-road-still-knows/6806432947",
+          "rect": {
+            "top": 45.75,
+            "bottom": 85.75,
+            "width": 40,
+            "height": 40
+          },
+          "menuOpacity": "0",
+          "expanded": "false"
+        },
+        {
+          "tag": "A",
+          "text": "Listen on Spotify",
+          "label": null,
+          "href": "https://open.spotify.com/album/1af7jVOhvyLZJTOLxoX3rx",
+          "rect": {
+            "top": 521.984375,
+            "bottom": 580.78125,
+            "width": 288,
+            "height": 58.796875
+          },
+          "menuOpacity": "0",
+          "expanded": "false"
+        }
+      ]
+    },
+    {
+      "origin": "https://jdmusick.band",
+      "route": "/music/",
+      "status": 200,
+      "errors": [],
+      "meta": {
+        "title": "Music — JD Musick",
+        "description": "The Road Still Knows: 11 tracks. Eleven late-night stories of regret, reckoning, reassurance, and hard-won love, carried by smoky guitar, warm organ, and a weathered voice.",
+        "canonical": "https://jdmusick.band/music/",
+        "robots": "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1",
+        "h1": [
+          "The Road Still Knows"
+        ],
+        "schema": [
+          {
+            "@context": "https://schema.org",
+            "@type": "MusicAlbum",
+            "name": "The Road Still Knows",
+            "url": "https://jdmusick.band/music/",
+            "numTracks": 11,
+            "byArtist": {
+              "@type": "MusicGroup",
+              "name": "JD Musick",
+              "url": "https://jdmusick.band"
+            },
+            "track": [
+              {
+                "@type": "MusicRecording",
+                "position": 1,
+                "name": "She Left Me the Jukebox"
+              },
+              {
+                "@type": "MusicRecording",
+                "position": 2,
+                "name": "Matchbook Man"
+              },
+              {
+                "@type": "MusicRecording",
+                "position": 3,
+                "name": "Sunday Shoes"
+              },
+              {
+                "@type": "MusicRecording",
+                "position": 4,
+                "name": "The Bell Heard Me Lie"
+              },
+              {
+                "@type": "MusicRecording",
+                "position": 5,
+                "name": "Never Too Much for Me"
+              },
+              {
+                "@type": "MusicRecording",
+                "position": 6,
+                "name": "The Devil Keeps My Change"
+              },
+              {
+                "@type": "MusicRecording",
+                "position": 7,
+                "name": "Slide"
+              },
+              {
+                "@type": "MusicRecording",
+                "position": 8,
+                "name": "Love Done Found Me"
+              },
+              {
+                "@type": "MusicRecording",
+                "position": 9,
+                "name": "Slow Fire"
+              },
+              {
+                "@type": "MusicRecording",
+                "position": 10,
+                "name": "They Carry You Gentle"
+              },
+              {
+                "@type": "MusicRecording",
+                "position": 11,
+                "name": "Everybody’s Somebody at Closing Time"
+              }
+            ]
+          }
+        ],
+        "images": [
+          {
+            "src": "https://jdmusick.band/_astro/the-road-still-knows-cover.OWrUrXrd_Z28GstT.webp",
+            "width": 338,
+            "naturalWidth": 1280,
+            "srcset": "/_astro/the-road-still-knows-cover.OWrUrXrd_t8NIE.webp 340w, /_astro/the-road-still-knows-cover.OWrUrXrd_Z28GstT.webp 680w",
+            "sizes": "",
+            "alt": "The Road Still Knows album cover"
+          }
+        ],
+        "internalLinks": [
+          "/music/",
+          "/",
+          "/",
+          "/music/",
+          "/about/",
+          "/contact/",
+          "/privacy-policy/"
+        ],
+        "inlineLinks": [],
+        "overflow": false
+      },
+      "axe": {
+        "violations": [],
+        "incomplete": [
+          {
+            "id": "color-contrast",
+            "nodes": 65
+          },
+          {
+            "id": "link-in-text-block",
+            "nodes": 1
+          }
+        ],
+        "passes": 20
+      },
+      "reflow": {
+        "width": 320,
+        "scrollWidth": 320,
+        "overflow": false
+      },
+      "mobileAxe": [],
+      "keyboard": []
+    },
+    {
+      "origin": "https://jdmusick.band",
+      "route": "/about/",
+      "status": 200,
+      "errors": [],
+      "meta": {
+        "title": "About — JD Musick",
+        "description": "JD Musick makes smoky electric blues and soul built for the hour when the room gets quiet enough for the truth to come out.",
+        "canonical": "https://jdmusick.band/about/",
+        "robots": "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1",
+        "h1": [
+          "JD Musick"
+        ],
+        "schema": [
+          {
+            "@context": "https://schema.org",
+            "@type": "MusicGroup",
+            "name": "JD Musick",
+            "url": "https://jdmusick.band",
+            "genre": [
+              "Electric blues",
+              "Soul blues"
+            ],
+            "description": "JD Musick makes smoky electric blues and soul built for the hour when the room gets quiet enough for the truth to come out."
+          }
+        ],
+        "images": [],
+        "internalLinks": [
+          "/about/",
+          "/",
+          "/",
+          "/music/",
+          "/about/",
+          "/contact/",
+          "/contact/",
+          "/privacy-policy/"
+        ],
+        "inlineLinks": [],
+        "overflow": false
+      },
+      "axe": {
+        "violations": [],
+        "incomplete": [
+          {
+            "id": "color-contrast",
+            "nodes": 19
+          },
+          {
+            "id": "link-in-text-block",
+            "nodes": 1
+          }
+        ],
+        "passes": 18
+      },
+      "reflow": {
+        "width": 320,
+        "scrollWidth": 320,
+        "overflow": false
+      },
+      "mobileAxe": [],
+      "keyboard": []
+    },
+    {
+      "origin": "https://jdmusick.band",
+      "route": "/contact/",
+      "status": 200,
+      "errors": [],
+      "meta": {
+        "title": "Contact — JD Musick",
+        "description": "Contact JD Musick for booking, press, licensing, collaborations, and general enquiries.",
+        "canonical": "https://jdmusick.band/contact/",
+        "robots": "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1",
+        "h1": [
+          "Get in touch"
+        ],
+        "schema": [],
+        "images": [],
+        "internalLinks": [
+          "/contact/",
+          "/",
+          "/",
+          "/music/",
+          "/about/",
+          "/contact/",
+          "/privacy-policy/",
+          "/privacy-policy/"
+        ],
+        "inlineLinks": [
+          {
+            "text": "Privacy Policy",
+            "color": "rgb(229, 134, 95)",
+            "decoration": "none",
+            "parentColor": "rgb(141, 128, 110)"
+          }
+        ],
+        "overflow": false
+      },
+      "axe": {
+        "violations": [
+          {
+            "id": "link-in-text-block",
+            "impact": "serious",
+            "help": "Links must be distinguishable without relying on color",
+            "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/link-in-text-block?application=axeAPI",
+            "nodes": [
+              {
+                "target": [
+                  ".form-privacy > a[href$=\"privacy-policy/\"]"
+                ],
+                "html": "<a href=\"/privacy-policy/\" data-astro-cid-uw5kdbxl=\"\">Privacy Policy</a>",
+                "summary": "Fix any of the following:\n  The link has insufficient color contrast of 1.45:1 with the surrounding text. (Minimum contrast is 3:1, link text: #e5865f, surrounding text: #8d806e)\n  The link has no styling (such as underline) to distinguish it from the surrounding text"
+              }
+            ]
+          }
+        ],
+        "incomplete": [
+          {
+            "id": "color-contrast",
+            "nodes": 17
+          },
+          {
+            "id": "link-in-text-block",
+            "nodes": 1
+          }
+        ],
+        "passes": 25
+      },
+      "reflow": {
+        "width": 320,
+        "scrollWidth": 320,
+        "overflow": false
+      },
+      "mobileAxe": [
+        {
+          "id": "link-in-text-block",
+          "nodes": [
+            [
+              ".form-privacy > a[href$=\"privacy-policy/\"]"
+            ]
+          ]
+        }
+      ],
+      "keyboard": []
+    },
+    {
+      "origin": "https://jdmusick.band",
+      "route": "/privacy-policy/",
+      "status": 200,
+      "errors": [],
+      "meta": {
+        "title": "Privacy Policy — JD Musick",
+        "description": "Privacy Policy for the JD Musick website.",
+        "canonical": "https://jdmusick.band/privacy-policy/",
+        "robots": "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1",
+        "h1": [
+          "Privacy Policy"
+        ],
+        "schema": [],
+        "images": [],
+        "internalLinks": [
+          "/privacy-policy/",
+          "/",
+          "/",
+          "/music/",
+          "/about/",
+          "/contact/",
+          "/contact/",
+          "/contact/",
+          "/privacy-policy/"
+        ],
+        "inlineLinks": [
+          {
+            "text": "contact form",
+            "color": "rgb(229, 134, 95)",
+            "decoration": "none",
+            "parentColor": "rgb(200, 188, 168)"
+          },
+          {
+            "text": "Cloudflare Privacy Policy",
+            "color": "rgb(229, 134, 95)",
+            "decoration": "none",
+            "parentColor": "rgb(200, 188, 168)"
+          },
+          {
+            "text": "Cloudflare Privacy Policy",
+            "color": "rgb(229, 134, 95)",
+            "decoration": "none",
+            "parentColor": "rgb(200, 188, 168)"
+          },
+          {
+            "text": "Google Privacy Policy",
+            "color": "rgb(229, 134, 95)",
+            "decoration": "none",
+            "parentColor": "rgb(200, 188, 168)"
+          },
+          {
+            "text": "Spotify Privacy Policy",
+            "color": "rgb(229, 134, 95)",
+            "decoration": "none",
+            "parentColor": "rgb(200, 188, 168)"
+          },
+          {
+            "text": "Apple Privacy Policy",
+            "color": "rgb(229, 134, 95)",
+            "decoration": "none",
+            "parentColor": "rgb(200, 188, 168)"
+          },
+          {
+            "text": "contact form",
+            "color": "rgb(229, 134, 95)",
+            "decoration": "none",
+            "parentColor": "rgb(200, 188, 168)"
+          },
+          {
+            "text": "contact@jdmusick.band",
+            "color": "rgb(229, 134, 95)",
+            "decoration": "none",
+            "parentColor": "rgb(200, 188, 168)"
+          }
+        ],
+        "overflow": false
+      },
+      "axe": {
+        "violations": [
+          {
+            "id": "link-in-text-block",
+            "impact": "serious",
+            "help": "Links must be distinguishable without relying on color",
+            "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/link-in-text-block?application=axeAPI",
+            "nodes": [
+              {
+                "target": [
+                  "section:nth-child(5) > .lede > a[href$=\"contact/\"]"
+                ],
+                "html": "<a href=\"/contact/\" data-astro-cid-3llnt6j6=\"\">contact form</a>",
+                "summary": "Fix any of the following:\n  The link has insufficient color contrast of 1.41:1 with the surrounding text. (Minimum contrast is 3:1, link text: #e5865f, surrounding text: #c8bca8)\n  The link has no styling (such as underline) to distinguish it from the surrounding text"
+              },
+              {
+                "target": [
+                  ".lede > a[target=\"_blank\"][rel=\"noopener noreferrer\"]"
+                ],
+                "html": "<a href=\"https://www.cloudflare.com/privacypolicy/\" target=\"_blank\" rel=\"noopener noreferrer\" data-astro-cid-3llnt6j6=\"\">Cloudflare Privacy Policy</a>",
+                "summary": "Fix any of the following:\n  The link has insufficient color contrast of 1.41:1 with the surrounding text. (Minimum contrast is 3:1, link text: #e5865f, surrounding text: #c8bca8)\n  The link has no styling (such as underline) to distinguish it from the surrounding text"
+              },
+              {
+                "target": [
+                  "li:nth-child(1) > a[target=\"_blank\"][rel=\"noopener noreferrer\"]"
+                ],
+                "html": "<a href=\"https://www.cloudflare.com/privacypolicy/\" target=\"_blank\" rel=\"noopener noreferrer\" data-astro-cid-3llnt6j6=\"\">Cloudflare Privacy Policy</a>",
+                "summary": "Fix any of the following:\n  The link has insufficient color contrast of 1.41:1 with the surrounding text. (Minimum contrast is 3:1, link text: #e5865f, surrounding text: #c8bca8)\n  The link has no styling (such as underline) to distinguish it from the surrounding text"
+              },
+              {
+                "target": [
+                  "li:nth-child(2) > a[target=\"_blank\"][rel=\"noopener noreferrer\"]"
+                ],
+                "html": "<a href=\"https://policies.google.com/privacy\" target=\"_blank\" rel=\"noopener noreferrer\" data-astro-cid-3llnt6j6=\"\">Google Privacy Policy</a>",
+                "summary": "Fix any of the following:\n  The link has insufficient color contrast of 1.41:1 with the surrounding text. (Minimum contrast is 3:1, link text: #e5865f, surrounding text: #c8bca8)\n  The link has no styling (such as underline) to distinguish it from the surrounding text"
+              },
+              {
+                "target": [
+                  "li:nth-child(3) > a[target=\"_blank\"][rel=\"noopener noreferrer\"]"
+                ],
+                "html": "<a href=\"https://www.spotify.com/legal/privacy-policy/\" target=\"_blank\" rel=\"noopener noreferrer\" data-astro-cid-3llnt6j6=\"\">Spotify Privacy Policy</a>",
+                "summary": "Fix any of the following:\n  The link has insufficient color contrast of 1.41:1 with the surrounding text. (Minimum contrast is 3:1, link text: #e5865f, surrounding text: #c8bca8)\n  The link has no styling (such as underline) to distinguish it from the surrounding text"
+              },
+              {
+                "target": [
+                  "li:nth-child(4) > a[target=\"_blank\"][rel=\"noopener noreferrer\"]"
+                ],
+                "html": "<a href=\"https://www.apple.com/legal/privacy/\" target=\"_blank\" rel=\"noopener noreferrer\" data-astro-cid-3llnt6j6=\"\">Apple Privacy Policy</a>",
+                "summary": "Fix any of the following:\n  The link has insufficient color contrast of 1.41:1 with the surrounding text. (Minimum contrast is 3:1, link text: #e5865f, surrounding text: #c8bca8)\n  The link has no styling (such as underline) to distinguish it from the surrounding text"
+              },
+              {
+                "target": [
+                  "section:nth-child(17) > .lede > a[href$=\"contact/\"]"
+                ],
+                "html": "<a href=\"/contact/\" data-astro-cid-3llnt6j6=\"\">contact form</a>",
+                "summary": "Fix any of the following:\n  The link has insufficient color contrast of 1.41:1 with the surrounding text. (Minimum contrast is 3:1, link text: #e5865f, surrounding text: #c8bca8)\n  The link has no styling (such as underline) to distinguish it from the surrounding text"
+              },
+              {
+                "target": [
+                  "a[href=\"mailto:contact@jdmusick.band\"]"
+                ],
+                "html": "<a href=\"mailto:contact@jdmusick.band\" data-astro-cid-3llnt6j6=\"\">contact@jdmusick.band</a>",
+                "summary": "Fix any of the following:\n  The link has insufficient color contrast of 1.41:1 with the surrounding text. (Minimum contrast is 3:1, link text: #e5865f, surrounding text: #c8bca8)\n  The link has no styling (such as underline) to distinguish it from the surrounding text"
+              }
+            ]
+          }
+        ],
+        "incomplete": [
+          {
+            "id": "color-contrast",
+            "nodes": 13
+          },
+          {
+            "id": "link-in-text-block",
+            "nodes": 1
+          }
+        ],
+        "passes": 20
+      },
+      "reflow": {
+        "width": 320,
+        "scrollWidth": 320,
+        "overflow": false
+      },
+      "mobileAxe": [
+        {
+          "id": "link-in-text-block",
+          "nodes": [
+            [
+              "section:nth-child(5) > .lede > a[href$=\"contact/\"]"
+            ],
+            [
+              ".lede > a[target=\"_blank\"][rel=\"noopener noreferrer\"]"
+            ],
+            [
+              "li:nth-child(1) > a[target=\"_blank\"][rel=\"noopener noreferrer\"]"
+            ],
+            [
+              "li:nth-child(2) > a[target=\"_blank\"][rel=\"noopener noreferrer\"]"
+            ],
+            [
+              "li:nth-child(3) > a[target=\"_blank\"][rel=\"noopener noreferrer\"]"
+            ],
+            [
+              "li:nth-child(4) > a[target=\"_blank\"][rel=\"noopener noreferrer\"]"
+            ],
+            [
+              "section:nth-child(17) > .lede > a[href$=\"contact/\"]"
+            ],
+            [
+              "a[href=\"mailto:contact@jdmusick.band\"]"
+            ]
+          ]
+        }
+      ],
+      "keyboard": []
+    },
+    {
+      "origin": "https://jdmusick.band",
+      "route": "/404.html",
+      "status": 200,
+      "errors": [],
+      "meta": {
+        "title": "Page not found — JD Musick",
+        "description": "That page doesn't exist. Head back to the music.",
+        "canonical": "https://jdmusick.band/",
+        "robots": "noindex,follow",
+        "h1": [
+          "Page not found"
+        ],
+        "schema": [],
+        "images": [],
+        "internalLinks": [
+          "/404",
+          "/",
+          "/",
+          "/music/",
+          "/about/",
+          "/contact/",
+          "/",
+          "/music/",
+          "/privacy-policy/"
+        ],
+        "inlineLinks": [],
+        "overflow": false
+      },
+      "axe": {
+        "violations": [],
+        "incomplete": [
+          {
+            "id": "color-contrast",
+            "nodes": 14
+          },
+          {
+            "id": "link-in-text-block",
+            "nodes": 1
+          }
+        ],
+        "passes": 17
+      },
+      "reflow": {
+        "width": 320,
+        "scrollWidth": 320,
+        "overflow": false
+      },
+      "mobileAxe": [],
+      "keyboard": []
+    },
+    {
+      "origin": "http://127.0.0.1:4322",
+      "route": "/",
+      "status": 200,
+      "errors": [],
+      "meta": {
+        "title": "JD Musick — The Road Still Knows",
+        "description": "Eleven late-night stories of regret, reckoning, reassurance, and hard-won love, carried by smoky guitar, warm organ, and a weathered voice.",
+        "canonical": "https://jdmusick.band/",
+        "robots": "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1",
+        "h1": [
+          "The Road Still Knows"
+        ],
+        "schema": [
+          {
+            "@context": "https://schema.org",
+            "@type": "MusicGroup",
+            "name": "JD Musick",
+            "url": "https://jdmusick.band",
+            "genre": [
+              "Electric blues",
+              "Soul blues"
+            ],
+            "description": "Electric blues, soul, and stories that stay after last call.",
+            "album": {
+              "@type": "MusicAlbum",
+              "name": "The Road Still Knows",
+              "numTracks": 11,
+              "byArtist": {
+                "@type": "MusicGroup",
+                "name": "JD Musick"
+              }
+            }
+          }
+        ],
+        "images": [
+          {
+            "src": "http://127.0.0.1:4322/_image?href=%2F%40fs%2FC%3A%2FUsers%2FJD%2Fsource%2Fjd-musick%2Fsrc%2Fassets%2Fthe-road-still-knows-cover.png%3ForigWidth%3D3000%26origHeight%3D3000%26origFormat%3Dpng&w=1600&h=1600&f=webp",
+            "width": 1280,
+            "naturalWidth": 1280,
+            "srcset": "/_image?href=%2F%40fs%2FC%3A%2FUsers%2FJD%2Fsource%2Fjd-musick%2Fsrc%2Fassets%2Fthe-road-still-knows-cover.png%3ForigWidth%3D3000%26origHeight%3D3000%26origFormat%3Dpng&w=900&h=900&f=webp 900w, /_image?href=%2F%40fs%2FC%3A%2FUsers%2FJD%2Fsource%2Fjd-musick%2Fsrc%2Fassets%2Fthe-road-still-knows-cover.png%3ForigWidth%3D3000%26origHeight%3D3000%26origFormat%3Dpng&w=1600&h=1600&f=webp 1600w",
+            "sizes": "",
+            "alt": ""
+          }
+        ],
+        "internalLinks": [
+          "/",
+          "/",
+          "/",
+          "/music/",
+          "/about/",
+          "/contact/",
+          "/music/",
+          "/privacy-policy/"
+        ],
+        "inlineLinks": [],
+        "overflow": false
+      },
+      "axe": {
+        "violations": [],
+        "incomplete": [
+          {
+            "id": "color-contrast",
+            "nodes": 17
+          },
+          {
+            "id": "link-in-text-block",
+            "nodes": 1
+          }
+        ],
+        "passes": 20
+      },
+      "reflow": {
+        "width": 320,
+        "scrollWidth": 320,
+        "overflow": false
+      },
+      "mobileAxe": [],
+      "keyboard": [
+        {
+          "tag": "A",
+          "text": "Skip to content",
+          "label": null,
+          "href": "#main",
+          "rect": {
+            "top": 16,
+            "bottom": 64.796875,
+            "width": 160.984375,
+            "height": 48.796875
+          },
+          "menuOpacity": "0",
+          "expanded": "false"
+        },
+        {
+          "tag": "A",
+          "text": "JD MUSICK",
+          "label": "JD Musick — home",
+          "href": "/",
+          "rect": {
+            "top": 13.796875,
+            "bottom": 44.203125,
+            "width": 133.53125,
+            "height": 30.40625
+          },
+          "menuOpacity": "0",
+          "expanded": "false"
+        },
+        {
+          "tag": "BUTTON",
+          "text": "",
+          "label": "Toggle menu",
+          "href": null,
+          "rect": {
+            "top": 8,
+            "bottom": 50,
+            "width": 42,
+            "height": 42
+          },
+          "menuOpacity": "0",
+          "expanded": "false"
+        },
+        {
+          "tag": "A",
+          "text": "Home",
+          "label": null,
+          "href": "/",
+          "rect": {
+            "top": 66,
+            "bottom": 112.6875,
+            "width": 288,
+            "height": 46.6875
+          },
+          "menuOpacity": "0",
+          "expanded": "false"
+        },
+        {
+          "tag": "A",
+          "text": "Music",
+          "label": null,
+          "href": "/music/",
+          "rect": {
+            "top": 42.6875,
+            "bottom": 89.375,
+            "width": 288,
+            "height": 46.6875
+          },
+          "menuOpacity": "0",
+          "expanded": "false"
+        },
+        {
+          "tag": "A",
+          "text": "About",
+          "label": null,
+          "href": "/about/",
+          "rect": {
+            "top": 42.375,
+            "bottom": 89.0625,
+            "width": 288,
+            "height": 46.6875
+          },
+          "menuOpacity": "0",
+          "expanded": "false"
+        },
+        {
+          "tag": "A",
+          "text": "Contact",
+          "label": null,
+          "href": "/contact/",
+          "rect": {
+            "top": 43.0625,
+            "bottom": 89.75,
+            "width": 288,
+            "height": 46.6875
+          },
+          "menuOpacity": "0",
+          "expanded": "false"
+        },
+        {
+          "tag": "A",
+          "text": "",
+          "label": "Spotify",
+          "href": "https://open.spotify.com/album/1af7jVOhvyLZJTOLxoX3rx",
+          "rect": {
+            "top": 45.75,
+            "bottom": 85.75,
+            "width": 40,
+            "height": 40
+          },
+          "menuOpacity": "0",
+          "expanded": "false"
+        },
+        {
+          "tag": "A",
+          "text": "",
+          "label": "Apple Music",
+          "href": "https://music.apple.com/us/album/the-road-still-knows/6806432947",
+          "rect": {
+            "top": 45.75,
+            "bottom": 85.75,
+            "width": 40,
+            "height": 40
+          },
+          "menuOpacity": "0",
+          "expanded": "false"
+        },
+        {
+          "tag": "A",
+          "text": "Listen on Spotify",
+          "label": null,
+          "href": "https://open.spotify.com/album/1af7jVOhvyLZJTOLxoX3rx",
+          "rect": {
+            "top": 521.984375,
+            "bottom": 580.78125,
+            "width": 288,
+            "height": 58.796875
+          },
+          "menuOpacity": "0",
+          "expanded": "false"
+        }
+      ]
+    },
+    {
+      "origin": "http://127.0.0.1:4322",
+      "route": "/music/",
+      "status": 200,
+      "errors": [],
+      "meta": {
+        "title": "Music — JD Musick",
+        "description": "The Road Still Knows: 11 tracks. Eleven late-night stories of regret, reckoning, reassurance, and hard-won love, carried by smoky guitar, warm organ, and a weathered voice.",
+        "canonical": "https://jdmusick.band/music/",
+        "robots": "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1",
+        "h1": [
+          "The Road Still Knows"
+        ],
+        "schema": [
+          {
+            "@context": "https://schema.org",
+            "@type": "MusicAlbum",
+            "name": "The Road Still Knows",
+            "url": "https://jdmusick.band/music/",
+            "numTracks": 11,
+            "byArtist": {
+              "@type": "MusicGroup",
+              "name": "JD Musick",
+              "url": "https://jdmusick.band"
+            },
+            "track": [
+              {
+                "@type": "MusicRecording",
+                "position": 1,
+                "name": "She Left Me the Jukebox"
+              },
+              {
+                "@type": "MusicRecording",
+                "position": 2,
+                "name": "Matchbook Man"
+              },
+              {
+                "@type": "MusicRecording",
+                "position": 3,
+                "name": "Sunday Shoes"
+              },
+              {
+                "@type": "MusicRecording",
+                "position": 4,
+                "name": "The Bell Heard Me Lie"
+              },
+              {
+                "@type": "MusicRecording",
+                "position": 5,
+                "name": "Never Too Much for Me"
+              },
+              {
+                "@type": "MusicRecording",
+                "position": 6,
+                "name": "The Devil Keeps My Change"
+              },
+              {
+                "@type": "MusicRecording",
+                "position": 7,
+                "name": "Slide"
+              },
+              {
+                "@type": "MusicRecording",
+                "position": 8,
+                "name": "Love Done Found Me"
+              },
+              {
+                "@type": "MusicRecording",
+                "position": 9,
+                "name": "Slow Fire"
+              },
+              {
+                "@type": "MusicRecording",
+                "position": 10,
+                "name": "They Carry You Gentle"
+              },
+              {
+                "@type": "MusicRecording",
+                "position": 11,
+                "name": "Everybody’s Somebody at Closing Time"
+              }
+            ]
+          }
+        ],
+        "images": [
+          {
+            "src": "http://127.0.0.1:4322/_image?href=%2F%40fs%2FC%3A%2FUsers%2FJD%2Fsource%2Fjd-musick%2Fsrc%2Fassets%2Fthe-road-still-knows-cover.png%3ForigWidth%3D3000%26origHeight%3D3000%26origFormat%3Dpng&w=680&h=680&f=webp",
+            "width": 338,
+            "naturalWidth": 1280,
+            "srcset": "/_image?href=%2F%40fs%2FC%3A%2FUsers%2FJD%2Fsource%2Fjd-musick%2Fsrc%2Fassets%2Fthe-road-still-knows-cover.png%3ForigWidth%3D3000%26origHeight%3D3000%26origFormat%3Dpng&w=340&h=340&f=webp 340w, /_image?href=%2F%40fs%2FC%3A%2FUsers%2FJD%2Fsource%2Fjd-musick%2Fsrc%2Fassets%2Fthe-road-still-knows-cover.png%3ForigWidth%3D3000%26origHeight%3D3000%26origFormat%3Dpng&w=680&h=680&f=webp 680w",
+            "sizes": "",
+            "alt": "The Road Still Knows album cover"
+          }
+        ],
+        "internalLinks": [
+          "/music/",
+          "/",
+          "/",
+          "/music/",
+          "/about/",
+          "/contact/",
+          "/privacy-policy/"
+        ],
+        "inlineLinks": [],
+        "overflow": false
+      },
+      "axe": {
+        "violations": [],
+        "incomplete": [
+          {
+            "id": "color-contrast",
+            "nodes": 65
+          },
+          {
+            "id": "link-in-text-block",
+            "nodes": 1
+          }
+        ],
+        "passes": 22
+      },
+      "reflow": {
+        "width": 320,
+        "scrollWidth": 320,
+        "overflow": false
+      },
+      "mobileAxe": [],
+      "keyboard": []
+    },
+    {
+      "origin": "http://127.0.0.1:4322",
+      "route": "/about/",
+      "status": 200,
+      "errors": [],
+      "meta": {
+        "title": "About — JD Musick",
+        "description": "JD Musick makes smoky electric blues and soul built for the hour when the room gets quiet enough for the truth to come out.",
+        "canonical": "https://jdmusick.band/about/",
+        "robots": "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1",
+        "h1": [
+          "JD Musick"
+        ],
+        "schema": [
+          {
+            "@context": "https://schema.org",
+            "@type": "MusicGroup",
+            "name": "JD Musick",
+            "url": "https://jdmusick.band",
+            "genre": [
+              "Electric blues",
+              "Soul blues"
+            ],
+            "description": "JD Musick makes smoky electric blues and soul built for the hour when the room gets quiet enough for the truth to come out."
+          }
+        ],
+        "images": [],
+        "internalLinks": [
+          "/about/",
+          "/",
+          "/",
+          "/music/",
+          "/about/",
+          "/contact/",
+          "/contact/",
+          "/privacy-policy/"
+        ],
+        "inlineLinks": [],
+        "overflow": false
+      },
+      "axe": {
+        "violations": [],
+        "incomplete": [
+          {
+            "id": "color-contrast",
+            "nodes": 19
+          },
+          {
+            "id": "link-in-text-block",
+            "nodes": 1
+          }
+        ],
+        "passes": 19
+      },
+      "reflow": {
+        "width": 320,
+        "scrollWidth": 320,
+        "overflow": false
+      },
+      "mobileAxe": [],
+      "keyboard": []
+    },
+    {
+      "origin": "http://127.0.0.1:4322",
+      "route": "/contact/",
+      "status": 200,
+      "errors": [],
+      "meta": {
+        "title": "Contact — JD Musick",
+        "description": "Contact JD Musick for booking, press, licensing, collaborations, and general enquiries.",
+        "canonical": "https://jdmusick.band/contact/",
+        "robots": "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1",
+        "h1": [
+          "Get in touch"
+        ],
+        "schema": [],
+        "images": [],
+        "internalLinks": [
+          "/contact/",
+          "/",
+          "/",
+          "/music/",
+          "/about/",
+          "/contact/",
+          "/privacy-policy/",
+          "/privacy-policy/"
+        ],
+        "inlineLinks": [
+          {
+            "text": "Privacy Policy",
+            "color": "rgb(229, 134, 95)",
+            "decoration": "none",
+            "parentColor": "rgb(141, 128, 110)"
+          }
+        ],
+        "overflow": false
+      },
+      "axe": {
+        "violations": [
+          {
+            "id": "link-in-text-block",
+            "impact": "serious",
+            "help": "Links must be distinguishable without relying on color",
+            "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/link-in-text-block?application=axeAPI",
+            "nodes": [
+              {
+                "target": [
+                  ".form-privacy > a[href$=\"privacy-policy/\"]"
+                ],
+                "html": "<a href=\"/privacy-policy/\" data-astro-cid-uw5kdbxl=\"\">Privacy Policy</a>",
+                "summary": "Fix any of the following:\n  The link has insufficient color contrast of 1.45:1 with the surrounding text. (Minimum contrast is 3:1, link text: #e5865f, surrounding text: #8d806e)\n  The link has no styling (such as underline) to distinguish it from the surrounding text"
+              }
+            ]
+          }
+        ],
+        "incomplete": [
+          {
+            "id": "color-contrast",
+            "nodes": 20
+          },
+          {
+            "id": "link-in-text-block",
+            "nodes": 1
+          }
+        ],
+        "passes": 25
+      },
+      "reflow": {
+        "width": 320,
+        "scrollWidth": 320,
+        "overflow": false
+      },
+      "mobileAxe": [
+        {
+          "id": "link-in-text-block",
+          "nodes": [
+            [
+              ".form-privacy > a[href$=\"privacy-policy/\"]"
+            ]
+          ]
+        }
+      ],
+      "keyboard": []
+    },
+    {
+      "origin": "http://127.0.0.1:4322",
+      "route": "/privacy-policy/",
+      "status": 200,
+      "errors": [],
+      "meta": {
+        "title": "Privacy Policy — JD Musick",
+        "description": "Privacy Policy for the JD Musick website.",
+        "canonical": "https://jdmusick.band/privacy-policy/",
+        "robots": "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1",
+        "h1": [
+          "Privacy Policy"
+        ],
+        "schema": [],
+        "images": [],
+        "internalLinks": [
+          "/privacy-policy/",
+          "/",
+          "/",
+          "/music/",
+          "/about/",
+          "/contact/",
+          "/contact/",
+          "/contact/",
+          "/privacy-policy/"
+        ],
+        "inlineLinks": [
+          {
+            "text": "contact form",
+            "color": "rgb(229, 134, 95)",
+            "decoration": "none",
+            "parentColor": "rgb(200, 188, 168)"
+          },
+          {
+            "text": "Cloudflare Privacy Policy",
+            "color": "rgb(229, 134, 95)",
+            "decoration": "none",
+            "parentColor": "rgb(200, 188, 168)"
+          },
+          {
+            "text": "Cloudflare Privacy Policy",
+            "color": "rgb(229, 134, 95)",
+            "decoration": "none",
+            "parentColor": "rgb(200, 188, 168)"
+          },
+          {
+            "text": "Google Privacy Policy",
+            "color": "rgb(229, 134, 95)",
+            "decoration": "none",
+            "parentColor": "rgb(200, 188, 168)"
+          },
+          {
+            "text": "Spotify Privacy Policy",
+            "color": "rgb(229, 134, 95)",
+            "decoration": "none",
+            "parentColor": "rgb(200, 188, 168)"
+          },
+          {
+            "text": "Apple Privacy Policy",
+            "color": "rgb(229, 134, 95)",
+            "decoration": "none",
+            "parentColor": "rgb(200, 188, 168)"
+          },
+          {
+            "text": "contact form",
+            "color": "rgb(229, 134, 95)",
+            "decoration": "none",
+            "parentColor": "rgb(200, 188, 168)"
+          },
+          {
+            "text": "contact@jdmusick.band",
+            "color": "rgb(229, 134, 95)",
+            "decoration": "none",
+            "parentColor": "rgb(200, 188, 168)"
+          }
+        ],
+        "overflow": false
+      },
+      "axe": {
+        "violations": [
+          {
+            "id": "link-in-text-block",
+            "impact": "serious",
+            "help": "Links must be distinguishable without relying on color",
+            "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/link-in-text-block?application=axeAPI",
+            "nodes": [
+              {
+                "target": [
+                  ".policy-block:nth-child(5) > .lede > a[href$=\"contact/\"]"
+                ],
+                "html": "<a href=\"/contact/\" data-astro-cid-3llnt6j6=\"\">contact form</a>",
+                "summary": "Fix any of the following:\n  The link has insufficient color contrast of 1.41:1 with the surrounding text. (Minimum contrast is 3:1, link text: #e5865f, surrounding text: #c8bca8)\n  The link has no styling (such as underline) to distinguish it from the surrounding text"
+              },
+              {
+                "target": [
+                  ".lede > a[rel=\"noopener noreferrer\"][target=\"_blank\"]"
+                ],
+                "html": "<a href=\"https://www.cloudflare.com/privacypolicy/\" target=\"_blank\" rel=\"noopener noreferrer\" data-astro-cid-3llnt6j6=\"\">Cloudflare Privacy Policy</a>",
+                "summary": "Fix any of the following:\n  The link has insufficient color contrast of 1.41:1 with the surrounding text. (Minimum contrast is 3:1, link text: #e5865f, surrounding text: #c8bca8)\n  The link has no styling (such as underline) to distinguish it from the surrounding text"
+              },
+              {
+                "target": [
+                  "li:nth-child(1) > a[rel=\"noopener noreferrer\"][target=\"_blank\"]"
+                ],
+                "html": "<a href=\"https://www.cloudflare.com/privacypolicy/\" target=\"_blank\" rel=\"noopener noreferrer\" data-astro-cid-3llnt6j6=\"\">Cloudflare Privacy Policy</a>",
+                "summary": "Fix any of the following:\n  The link has insufficient color contrast of 1.41:1 with the surrounding text. (Minimum contrast is 3:1, link text: #e5865f, surrounding text: #c8bca8)\n  The link has no styling (such as underline) to distinguish it from the surrounding text"
+              },
+              {
+                "target": [
+                  "li:nth-child(2) > a[rel=\"noopener noreferrer\"][target=\"_blank\"]"
+                ],
+                "html": "<a href=\"https://policies.google.com/privacy\" target=\"_blank\" rel=\"noopener noreferrer\" data-astro-cid-3llnt6j6=\"\">Google Privacy Policy</a>",
+                "summary": "Fix any of the following:\n  The link has insufficient color contrast of 1.41:1 with the surrounding text. (Minimum contrast is 3:1, link text: #e5865f, surrounding text: #c8bca8)\n  The link has no styling (such as underline) to distinguish it from the surrounding text"
+              },
+              {
+                "target": [
+                  "li:nth-child(3) > a[rel=\"noopener noreferrer\"][target=\"_blank\"]"
+                ],
+                "html": "<a href=\"https://www.spotify.com/legal/privacy-policy/\" target=\"_blank\" rel=\"noopener noreferrer\" data-astro-cid-3llnt6j6=\"\">Spotify Privacy Policy</a>",
+                "summary": "Fix any of the following:\n  The link has insufficient color contrast of 1.41:1 with the surrounding text. (Minimum contrast is 3:1, link text: #e5865f, surrounding text: #c8bca8)\n  The link has no styling (such as underline) to distinguish it from the surrounding text"
+              },
+              {
+                "target": [
+                  "li:nth-child(4) > a[rel=\"noopener noreferrer\"][target=\"_blank\"]"
+                ],
+                "html": "<a href=\"https://www.apple.com/legal/privacy/\" target=\"_blank\" rel=\"noopener noreferrer\" data-astro-cid-3llnt6j6=\"\">Apple Privacy Policy</a>",
+                "summary": "Fix any of the following:\n  The link has insufficient color contrast of 1.41:1 with the surrounding text. (Minimum contrast is 3:1, link text: #e5865f, surrounding text: #c8bca8)\n  The link has no styling (such as underline) to distinguish it from the surrounding text"
+              },
+              {
+                "target": [
+                  ".policy-block:nth-child(17) > .lede > a[href$=\"contact/\"]"
+                ],
+                "html": "<a href=\"/contact/\" data-astro-cid-3llnt6j6=\"\">contact form</a>",
+                "summary": "Fix any of the following:\n  The link has insufficient color contrast of 1.41:1 with the surrounding text. (Minimum contrast is 3:1, link text: #e5865f, surrounding text: #c8bca8)\n  The link has no styling (such as underline) to distinguish it from the surrounding text"
+              },
+              {
+                "target": [
+                  "a[href=\"mailto:contact@jdmusick.band\"]"
+                ],
+                "html": "<a href=\"mailto:contact@jdmusick.band\" data-astro-cid-3llnt6j6=\"\">contact@jdmusick.band</a>",
+                "summary": "Fix any of the following:\n  The link has insufficient color contrast of 1.41:1 with the surrounding text. (Minimum contrast is 3:1, link text: #e5865f, surrounding text: #c8bca8)\n  The link has no styling (such as underline) to distinguish it from the surrounding text"
+              }
+            ]
+          }
+        ],
+        "incomplete": [
+          {
+            "id": "color-contrast",
+            "nodes": 13
+          },
+          {
+            "id": "link-in-text-block",
+            "nodes": 1
+          }
+        ],
+        "passes": 21
+      },
+      "reflow": {
+        "width": 320,
+        "scrollWidth": 320,
+        "overflow": false
+      },
+      "mobileAxe": [
+        {
+          "id": "link-in-text-block",
+          "nodes": [
+            [
+              ".policy-block:nth-child(5) > .lede > a[href$=\"contact/\"]"
+            ],
+            [
+              ".lede > a[rel=\"noopener noreferrer\"][target=\"_blank\"]"
+            ],
+            [
+              "li:nth-child(1) > a[rel=\"noopener noreferrer\"][target=\"_blank\"]"
+            ],
+            [
+              "li:nth-child(2) > a[rel=\"noopener noreferrer\"][target=\"_blank\"]"
+            ],
+            [
+              "li:nth-child(3) > a[rel=\"noopener noreferrer\"][target=\"_blank\"]"
+            ],
+            [
+              "li:nth-child(4) > a[rel=\"noopener noreferrer\"][target=\"_blank\"]"
+            ],
+            [
+              ".policy-block:nth-child(17) > .lede > a[href$=\"contact/\"]"
+            ],
+            [
+              "a[href=\"mailto:contact@jdmusick.band\"]"
+            ]
+          ]
+        }
+      ],
+      "keyboard": []
+    },
+    {
+      "origin": "http://127.0.0.1:4322",
+      "route": "/404.html",
+      "status": 404,
+      "errors": [],
+      "meta": {
+        "title": "Page not found — JD Musick",
+        "description": "That page doesn't exist. Head back to the music.",
+        "canonical": "https://jdmusick.band/",
+        "robots": "noindex,follow",
+        "h1": [
+          "Page not found"
+        ],
+        "schema": [],
+        "images": [],
+        "internalLinks": [
+          "/404.html",
+          "/",
+          "/",
+          "/music/",
+          "/about/",
+          "/contact/",
+          "/",
+          "/music/",
+          "/privacy-policy/"
+        ],
+        "inlineLinks": [],
+        "overflow": false
+      },
+      "axe": {
+        "violations": [],
+        "incomplete": [
+          {
+            "id": "color-contrast",
+            "nodes": 14
+          },
+          {
+            "id": "link-in-text-block",
+            "nodes": 1
+          }
+        ],
+        "passes": 19
+      },
+      "reflow": {
+        "width": 320,
+        "scrollWidth": 320,
+        "overflow": false
+      },
+      "mobileAxe": [],
+      "keyboard": []
+    }
+  ]
+}

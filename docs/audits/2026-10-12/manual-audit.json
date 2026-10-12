@@ -1,0 +1,75 @@
+{
+  "contrast": [
+    {
+      "name": "muted on panel",
+      "ratio": 4.66
+    },
+    {
+      "name": "muted on page",
+      "ratio": 5.14
+    },
+    {
+      "name": "button",
+      "ratio": 4.59
+    },
+    {
+      "name": "link against prose",
+      "ratio": 1.42
+    }
+  ],
+  "checks": [
+    {
+      "route": "/",
+      "textSpacing": {
+        "overflow": false,
+        "scrollWidth": 320
+      }
+    },
+    {
+      "route": "/music/",
+      "textSpacing": {
+        "overflow": false,
+        "scrollWidth": 320
+      }
+    },
+    {
+      "route": "/about/",
+      "textSpacing": {
+        "overflow": false,
+        "scrollWidth": 320
+      }
+    },
+    {
+      "route": "/contact/",
+      "textSpacing": {
+        "overflow": false,
+        "scrollWidth": 320
+      }
+    },
+    {
+      "route": "/privacy-policy/",
+      "textSpacing": {
+        "overflow": false,
+        "scrollWidth": 320
+      }
+    },
+    {
+      "route": "/404.html",
+      "textSpacing": {
+        "overflow": false,
+        "scrollWidth": 320
+      }
+    }
+  ],
+  "skip": {
+    "hash": "#main",
+    "active": "BODY",
+    "activeId": "",
+    "next": {
+      "text": "Listen on Spotify",
+      "href": "https://open.spotify.com/album/1af7jVOhvyLZJTOLxoX3rx"
+    }
+  },
+  "menuOpen": "true",
+  "openMenuNext": "Home"
+}
