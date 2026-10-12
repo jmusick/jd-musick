@@ -168,6 +168,23 @@ a:hover {
 	color: var(--link-hover);
 }
 
+/* Prose links: underline at rest so they do not rely on color alone
+   (WCAG 1.4.1). Class-less anchors in page content and the footer legal line
+   qualify; nav, .btn, .social-link and other classed links keep their own look. */
+main a:not([class]),
+.footer-legal a {
+	text-decoration: underline;
+	text-decoration-thickness: 1px;
+	text-underline-offset: 0.2em;
+	transition: color var(--duration-fast) var(--ease-out),
+		text-decoration-color var(--duration-fast) var(--ease-out);
+}
+
+main a:not([class]):hover,
+.footer-legal a:hover {
+	text-decoration-thickness: 2px;
+}
+
 img {
 	max-width: 100%;
 }
@@ -704,27 +721,42 @@ img {
 		flex-wrap: wrap;
 	}
 
-	.nav-toggle {
-		display: flex;
-	}
-
+	/* Without JavaScript the toggle is hidden and the menu stays expanded. */
 	.site-head-right {
 		order: 3;
 		width: 100%;
 		flex-direction: column;
 		align-items: stretch;
 		margin-left: 0;
+		padding-bottom: var(--space-3);
+	}
+
+	/* The "js" class is set by an inline script in SiteHeader.astro. */
+	.js .nav-toggle {
+		display: flex;
+	}
+
+	/* Collapsed menu: visibility:hidden removes its links from the tab order
+	   and accessibility tree. On close, visibility flips only after the fade
+	   so the animation still plays; on open it flips immediately. */
+	.js .site-head-right {
 		max-height: 0;
 		overflow: hidden;
 		opacity: 0;
+		visibility: hidden;
+		padding-bottom: 0;
 		transition: max-height var(--duration-slow) var(--ease-out),
-			opacity var(--duration-base) var(--ease-out);
+			opacity var(--duration-base) var(--ease-out),
+			padding-bottom var(--duration-slow) var(--ease-out),
+			visibility 0s linear var(--duration-slow);
 	}
 
-	.site-head-right.is-open {
+	.js .site-head-right.is-open {
 		max-height: 32rem;
 		opacity: 1;
+		visibility: visible;
 		padding-bottom: var(--space-3);
+		transition-delay: 0s;
 	}
 
 	.site-nav {
@@ -788,5 +820,9 @@ img {
 	* {
 		animation-duration: 0.01ms !important;
 		transition-duration: 0.01ms !important;
+	}
+
+	.js .site-head-right {
+		transition-delay: 0s;
 	}
 }
