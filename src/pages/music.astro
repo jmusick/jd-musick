@@ -1,30 +1,24 @@
 ---
-import { Image } from "astro:assets";
+import { Image, getImage } from "astro:assets";
 import Layout from "../layouts/Layout.astro";
 import cover from "../assets/the-road-still-knows-cover.png";
-import { ALBUM, ALBUM_RUNTIME, TRACK_COUNT } from "../data/album";
-import { ACTIVE_SOCIALS, SITE_NAME, SITE_URL } from "../config/site";
+import { ALBUM, ALBUM_RUNTIME, TRACK_COUNT, formatReleaseDate } from "../data/album";
+import { ACTIVE_SOCIALS, SITE_GENRE_PHRASE, SITE_NAME, SITE_URL } from "../config/site";
+import { albumEntity } from "../lib/structured-data";
 
 const canonicalUrl = `${SITE_URL}/music/`;
 
-const structuredData = {
-	"@context": "https://schema.org",
-	"@type": "MusicAlbum",
-	name: ALBUM.title,
-	url: canonicalUrl,
-	numTracks: TRACK_COUNT,
-	byArtist: { "@type": "MusicGroup", name: SITE_NAME, url: SITE_URL },
-	track: ALBUM.tracks.map((t) => ({
-		"@type": "MusicRecording",
-		position: t.n,
-		name: t.title,
-	})),
-};
+const coverForSchema = await getImage({ src: cover, format: "webp", width: 1200 });
+const structuredData = albumEntity(new URL(coverForSchema.src, SITE_URL).href);
+
+const releaseDate = formatReleaseDate();
+const title = `${ALBUM.title} — ${SITE_NAME} | Music`;
+const description = `${ALBUM.title}, the debut ${SITE_GENRE_PHRASE} album by ${SITE_NAME}${releaseDate ? `, released ${releaseDate}` : ""}. Tracklist, runtime, and where to listen.`;
 ---
 
 <Layout
-	title={`Music — ${SITE_NAME}`}
-	description={`${ALBUM.title}: ${TRACK_COUNT} tracks. ${ALBUM.blurb}`}
+	title={title}
+	description={description}
 	canonicalUrl={canonicalUrl}
 	structuredData={structuredData}
 	active="music"
@@ -35,7 +29,7 @@ const structuredData = {
 
 		<div class="release" style="margin-top: var(--space-7)">
 			<div class="release-art">
-				<Image src={cover} alt={`${ALBUM.title} album cover`} widths={[340, 680]} />
+				<Image src={cover} alt={`${ALBUM.title} album cover`} widths={[340, 680]} sizes="(max-width: 420px) calc(100vw - 32px), 340px" />
 			</div>
 
 			<div class="release-meta">
@@ -46,13 +40,7 @@ const structuredData = {
 					<span>{TRACK_COUNT} tracks</span>
 					<span>{ALBUM_RUNTIME}</span>
 					<span>
-						{ALBUM.releaseDate
-							? new Date(`${ALBUM.releaseDate}T00:00:00`).toLocaleDateString("en-US", {
-									year: "numeric",
-									month: "long",
-									day: "numeric",
-								})
-							: `${ALBUM.year} · date TBA`}
+						{releaseDate ?? `${ALBUM.year} · date TBA`}
 					</span>
 				</div>
 
