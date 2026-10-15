@@ -125,11 +125,27 @@ access, so these returned HTTP 403:
 - Zone security level and bot settings
 - Email Sending daily quota and any sending budget
 
+### Checked by the owner in the dashboard (October 12, 2026)
+
+- **Rate-limiting rule** "Contact form" is deployed and active with the Free
+  plan values in item 1 below. Five quick `GET` requests to `/api/contact`
+  returned 405, 405, 405, 429, 429; the homepage still returned 200.
+- **Email Sending quota**: 200 messages per day, resetting daily. There is no
+  separate spending or budget setting. Sending reputation was Healthy
+  (100% delivery, 0% bounce, spam complaint and spam rejection rates).
+- **Email preview** (Email Sending → Settings) is **on**: Cloudflare keeps a
+  readable preview of each sent message, including the visitor's name,
+  email, subject and message, in the Activity log for about 7 days. The
+  Privacy Policy discloses this. If you turn it off, remove that sentence
+  from `src/pages/privacy-policy.astro`.
+- **Drop suppressed recipients** is off (the default): a send to a suppressed
+  address fails instead of being silently dropped.
+
 ### To be configured by the owner
 
-These are recommendations. None of them has been applied.
+Item 1 and item 2 are done (see above). Item 3 is still open.
 
-1. **Rate-limiting rule** (Security → WAF → Rate limiting rules):
+1. **Rate-limiting rule** (Security → Security rules → Rate limiting rules):
 
    | Setting | Free plan (fixed values) | If the plan is upgraded to Pro |
    | --- | --- | --- |
@@ -150,8 +166,7 @@ These are recommendations. None of them has been applied.
    To confirm the rule without sending email, make four `GET` requests to
    `/api/contact` within 10 s. The first three should return 405 and the
    fourth 429.
-2. **Sending budget**: check the account's Email Sending quota in the
-   dashboard. Then record it here.
+2. **Sending budget**: 200 messages per day (recorded above).
 3. **Delivery-failure alert**: Pages Functions logs are not stored, so there
    is nothing to alert on yet. Options, in order of effort:
    - After each deploy, and about monthly, send a real test message through

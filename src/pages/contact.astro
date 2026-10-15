@@ -10,7 +10,7 @@ import {
 } from "../config/site";
 
 const canonicalUrl = `${SITE_URL}/contact/`;
-const description = `Contact ${SITE_NAME} for booking, press, licensing, collaborations, and general enquiries.`;
+const description = `Contact ${SITE_NAME} for booking, press, licensing, collaborations, and general inquiries.`;
 
 /** Cloudflare's documented always-passes key keeps the form usable on localhost. */
 const TURNSTILE_DEV_TEST_KEY = "1x00000000000000000000AA";
@@ -30,8 +30,7 @@ const functionUnavailable = import.meta.env.DEV;
 		<p class="eyebrow">Contact</p>
 		<h1 style="margin-top: var(--space-3)">Get in touch</h1>
 		<p class="lede contact-intro">
-			For bookings, press, licensing, collaborations, and general enquiries, send a
-			message below.
+			Send a message about booking, press, licensing, collaborations, or anything else.
 		</p>
 
 		{!turnstileSiteKey && (

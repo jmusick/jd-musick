@@ -22,7 +22,7 @@ export const ALBUM = {
 	year: 2026,
 	releaseDate: "2026-09-04" as string | null,
 	blurb:
-		"Eleven late-night stories of regret, reckoning, reassurance, and hard-won love, carried by smoky guitar, warm organ, and a weathered voice.",
+		"Eleven late-night songs about regret, reckoning, reassurance, and hard-won love. Smoky guitar and warm organ back a weathered voice.",
 	spotifyUrl: "https://open.spotify.com/album/1af7jVOhvyLZJTOLxoX3rx",
 	tracks: [
 		{ n: 1, title: "She Left Me the Jukebox", duration: "5:42", note: "Heartbreak with the bar still open." },

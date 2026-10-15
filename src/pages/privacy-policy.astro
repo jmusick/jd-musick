@@ -51,9 +51,12 @@ const lastUpdated = "October 12, 2026";
 					checks the submission for automated abuse. Cloudflare receives your IP address
 					and technical signals from your browser for that check. The form contents are
 					then sent through Cloudflare Email Sending to an email inbox hosted by Google
-					(Gmail). The site does not keep the message in a website database. The copy
-					in that inbox stays there until the site owner manually deletes it; there is
-					no fixed retention schedule.
+					(Gmail). The site does not keep the message in a website database. Cloudflare
+					keeps a preview of each sent message, including your name, email address,
+					subject, and message, in the site owner's Email Sending activity log for about
+					7 days, after which it is removed automatically. The copy in the Gmail inbox
+					stays there until the site owner manually deletes it; there is no fixed
+					retention schedule.
 				</p>
 			</section>
 
