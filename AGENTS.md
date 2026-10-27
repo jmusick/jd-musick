@@ -70,6 +70,17 @@ reachability as in `docs/audits/2026-10-12/dependency-triage.md`.
 No test suite or linter is configured. Verify changes with `npm run build`
 and, for anything visual, `npm run dev` + a browser check.
 
+## CI
+
+`.github/workflows/ci.yml` calls the shared `jmusick/ci` workflows (Baseline:
+secret scan, lockfile and npm audit checks; Web app: `npm ci` and
+`npm run build`) and ends in a **CI gate** job, the one check to require. The
+`jmusick/ci` references are pinned by commit SHA with the release tag as a
+comment; `.github/dependabot.yml` proposes new releases and keeps every action
+pin current, so keep any new action on a full SHA, not a floating tag. Add
+lint, type-check or test commands to the `web-app` job's `with:` block as the
+repo gains those scripts.
+
 ## Conventions
 
 - Folders in the media working project use lowercase kebab-case:
