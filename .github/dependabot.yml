@@ -1,0 +1,35 @@
+version: 2
+updates:
+  - package-ecosystem: npm
+    directory: /
+    schedule:
+      interval: weekly
+      day: monday
+      time: "06:00"
+    open-pull-requests-limit: 5
+    labels: [dependencies]
+    cooldown:
+      default-days: 7
+      semver-major-days: 14
+    groups:
+      # The framework, its adapter and the Workers toolchain move together and are tested together.
+      astro-and-cloudflare:
+        patterns: ["astro", "@astrojs/*", "wrangler", "@cloudflare/*"]
+      minor-and-patch:
+        patterns: ["*"]
+        update-types: [minor, patch]
+
+  # Keeps SHA-pinned actions current, including the jmusick/ci shared workflows.
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly
+      day: monday
+      time: "06:00"
+    open-pull-requests-limit: 3
+    labels: [dependencies]
+    cooldown:
+      default-days: 7
+    groups:
+      actions:
+        patterns: ["*"]
