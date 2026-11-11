@@ -4,9 +4,10 @@ import pkg from "../../package.json";
 export const SITE_VERSION: string = pkg.version;
 
 /**
- * Single source of truth for the public origin. Change this (and `site` in
- * astro.config.mjs) once the real domain is registered — nothing else
- * hardcodes a URL.
+ * Single source of truth for the public origin. If the domain ever changes,
+ * update this together with `site` in astro.config.mjs, the `Sitemap:` line in
+ * public/robots.txt, and the origin in functions/api/contact.ts. AGENTS.md
+ * lists the places that must match.
  */
 export const SITE_URL = "https://jdmusick.band";
 export const SITE_NAME = "JD Musick";
@@ -20,10 +21,11 @@ export const SITE_GENRES = ["Electric blues", "Soul blues"];
  * design and committed so production cannot silently render a form-less page
  * when a build variable is missing. The matching secret must only exist in
  * Cloudflare or .dev.vars. PUBLIC_TURNSTILE_SITE_KEY remains an optional
- * override for another deployment.
+ * override for another deployment. `||` (not `??`) so an empty value, such as
+ * the blank line in .env.example, also falls back to the committed key.
  */
 export const TURNSTILE_SITE_KEY: string =
-	import.meta.env.PUBLIC_TURNSTILE_SITE_KEY ?? "0x4AAAAAAE2nkWqLS-ID_LUE";
+	import.meta.env.PUBLIC_TURNSTILE_SITE_KEY || "0x4AAAAAAE2nkWqLS-ID_LUE";
 
 /**
  * Social and streaming profiles.
