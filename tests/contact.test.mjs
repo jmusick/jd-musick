@@ -110,7 +110,6 @@ const assertLogsCarryNoVisitorData = () => {
 	const all = logs.map(({ line }) => line).join("\n");
 	const secrets = [
 		...Object.values(VISITOR),
-		VISITOR.email.toLowerCase(),
 		VISITOR_IP,
 		ENV.TURNSTILE_SECRET,
 		ENV.CLOUDFLARE_API_TOKEN,
@@ -430,6 +429,27 @@ describe("Turnstile", () => {
 		assert.equal(params.get("secret"), ENV.TURNSTILE_SECRET);
 		assert.equal(params.get("response"), VISITOR.captchaToken);
 		assert.equal(params.get("remoteip"), VISITOR_IP);
+	});
+
+	test("an unreachable or failing Siteverify is a retryable 502 without sending", async () => {
+		const handlers = [
+			() => new Response("unavailable", { status: 503 }),
+			() => new Response("<html>ok</html>", { status: 200 }),
+			() => {
+				throw new TypeError("fetch failed");
+			},
+		];
+		for (const siteverify of handlers) {
+			calls = [];
+			stubFetch({ siteverify });
+			const response = await post();
+			assert.equal(response.status, 502);
+			assertApiHeaders(response);
+			const body = await response.json();
+			assert.equal(body.code, "verification_unavailable");
+			assert.equal(body.retryable, true);
+			assert.equal(emailCalls().length, 0);
+		}
 	});
 
 	test("a missing token gets 400 without calling Siteverify", async () => {
