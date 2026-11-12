@@ -57,6 +57,7 @@ npm run dev       # astro dev, http://localhost:4321
 npm run build     # astro build -> dist/
 npm run preview   # serve the built output
 npm run check     # tsc --noEmit; type-checks the .ts files, not .astro files
+npm test          # node:test suite in tests/ (contact Function invariants)
 npm run build && npx wrangler pages dev dist  # include Pages Functions
 npm run audit:deps  # npm audit --audit-level=high; fails on high/critical
 ```
@@ -72,19 +73,26 @@ whether the vulnerable code can see untrusted input. The image pipeline only
 processes images committed to `src/assets/`, so review the current sharp and
 Astro image advisories before adding remote, CMS-sourced or uploaded images.
 
-No test suite or linter is configured. Verify changes with `npm run check`
-and `npm run build`, and, for anything visual, `npm run dev` + a browser check.
+No linter is configured. Verify changes with `npm run check`, `npm test` and
+`npm run build`, and, for anything visual, `npm run dev` + a browser check.
+
+`tests/contact.test.mjs` imports `functions/api/contact.ts` directly; Node
+strips its types (on by default from Node 22.18, so the `engines` floor
+covers it). It calls `onRequest` with a stubbed `globalThis.fetch` and mocked
+timers, and asserts statuses, `code` values, headers and log fields rather
+than user-facing copy. Keep tests in `tests/` as `.mjs`: Pages turns every file
+under `functions/` into a route, and a `.ts` test would need `@types/node` to
+type-check. When you change a contact-form invariant below, update its test.
 
 ## CI
 
 `.github/workflows/ci.yml` calls the shared `jmusick/ci` workflows (Baseline:
 secret scan, lockfile and npm audit checks; Web app: `npm ci`,
-`npm run check` and `npm run build`) and ends in a **CI gate** job, the one
-check to require. The `jmusick/ci` references are pinned by commit SHA with the
+`npm run check`, `npm test` and `npm run build`) and ends in a **CI gate**
+job, the one check to require. The `jmusick/ci` references are pinned by commit SHA with the
 release tag as a comment; `.github/dependabot.yml` proposes new releases and keeps every action
-pin current, so keep any new action on a full SHA, not a floating tag. Add
-lint or test commands to the `web-app` job's `with:` block as the repo gains
-those scripts.
+pin current, so keep any new action on a full SHA, not a floating tag. Add a
+lint command to the `web-app` job's `with:` block if the repo gains one.
 
 ## Conventions
 
