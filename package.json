@@ -16,11 +16,11 @@
     "@astrojs/sitemap": "^3.7.4",
     "@iconify-json/lucide": "^1.2.151",
     "@iconify-json/simple-icons": "^1.2.101",
-    "astro": "^7.4.2",
+    "astro": "^7.4.5",
     "astro-icon": "^1.2.0"
   },
   "devDependencies": {
-    "@cloudflare/workers-types": "^5.20261026.1",
+    "@cloudflare/workers-types": "^5.20261104.1",
     "typescript": "^7.0.2"
   }
 }
