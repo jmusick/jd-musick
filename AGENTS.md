@@ -56,6 +56,7 @@ server-side route. Read `README.md` before changing visual styling or public cop
 npm run dev       # astro dev, http://localhost:4321
 npm run build     # astro build -> dist/
 npm run preview   # serve the built output
+npm run check     # tsc --noEmit; type-checks the .ts files, not .astro files
 npm run build && npx wrangler pages dev dist  # include Pages Functions
 npm run audit:deps  # npm audit --audit-level=high; fails on high/critical
 ```
@@ -71,19 +72,19 @@ whether the vulnerable code can see untrusted input. The image pipeline only
 processes images committed to `src/assets/`, so review the current sharp and
 Astro image advisories before adding remote, CMS-sourced or uploaded images.
 
-No test suite or linter is configured. Verify changes with `npm run build`
-and, for anything visual, `npm run dev` + a browser check.
+No test suite or linter is configured. Verify changes with `npm run check`
+and `npm run build`, and, for anything visual, `npm run dev` + a browser check.
 
 ## CI
 
 `.github/workflows/ci.yml` calls the shared `jmusick/ci` workflows (Baseline:
-secret scan, lockfile and npm audit checks; Web app: `npm ci` and
-`npm run build`) and ends in a **CI gate** job, the one check to require. The
-`jmusick/ci` references are pinned by commit SHA with the release tag as a
-comment; `.github/dependabot.yml` proposes new releases and keeps every action
+secret scan, lockfile and npm audit checks; Web app: `npm ci`,
+`npm run check` and `npm run build`) and ends in a **CI gate** job, the one
+check to require. The `jmusick/ci` references are pinned by commit SHA with the
+release tag as a comment; `.github/dependabot.yml` proposes new releases and keeps every action
 pin current, so keep any new action on a full SHA, not a floating tag. Add
-lint, type-check or test commands to the `web-app` job's `with:` block as the
-repo gains those scripts.
+lint or test commands to the `web-app` job's `with:` block as the repo gains
+those scripts.
 
 ## Conventions
 
