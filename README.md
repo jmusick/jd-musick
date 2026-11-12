@@ -8,10 +8,8 @@ Built with [Astro](https://astro.build) for static deployment to [Cloudflare Pag
 
 - `C:\Users\JD\source\jd-musick` — website source, configuration, dependencies, `README.md`, `AGENTS.md`, and versioned documentation.
 - `C:\Users\JD\projects\jd-musick` — media working project: WAV masters, distribution artwork, and brand images. All folders use lowercase kebab-case; master filenames retain their song titles.
-- [Asset organization](docs/assets.md) — folder map, provenance, and the workflow for producing website assets.
-- [October 12, 2026 audit](docs/audits/2026-10-12/report.md) — SEO, security, and accessibility evidence and prioritized GitHub issues.
 
-Keep published site identity and links in `src/config/site.ts` and album/track metadata in `src/data/album.ts`. Media specifications and original-file provenance belong with the asset project. Audit findings belong in GitHub Issues; dated evidence belongs in `docs/audits/`.
+Keep published site identity and links in `src/config/site.ts` and album/track metadata in `src/data/album.ts`. Media specifications and original-file provenance belong with the asset project. Audit findings and other work belong in GitHub Issues.
 
 ## Visual direction
 
@@ -77,8 +75,7 @@ have a 10-second deadline, and a timeout returns a retryable 504. The
 browser gives up after 25 seconds and asks the visitor to retry. Every
 response sets the API security headers. Logs are single-line JSON events
 with no visitor data. [docs/operations.md](docs/operations.md) covers the
-limits, log format, verified Cloudflare settings and the rate-limiting rule
-the owner still needs to configure.
+log format and the Cloudflare dashboard settings the endpoint relies on.
 
 Production configuration:
 

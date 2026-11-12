@@ -26,10 +26,12 @@ server-side route. Read `README.md` before changing visual styling or public cop
 
 - This checkout (`C:\Users\JD\source\jd-musick`) owns website code and
   versioned Markdown guidance. Keep original media in the separate working
-  project, `C:\Users\JD\projects\jd-musick`; see `docs/assets.md`.
-- `docs/` — website/asset workflow documentation, contact endpoint operations
-  (`docs/operations.md`) and dated audit evidence in `docs/audits/`. Actionable audit findings are tracked in GitHub Issues with
-  category and priority labels.
+  project, `C:\Users\JD\projects\jd-musick`, whose README maps the masters,
+  artwork and brand files. Nothing here builds from it.
+- `docs/operations.md` — the contact endpoint's log format and Cloudflare
+  dashboard settings.
+  Audit findings and other work are tracked in GitHub Issues with category and
+  priority labels.
 
 - `src/pages/` — routes (`index.astro`, `about.astro`, `music.astro`,
   `contact.astro`, `privacy-policy.astro`, `404.astro`).
@@ -65,7 +67,9 @@ AI coding agent; manage it with `npx astro dev status|logs|stop`, or set
 `audit:deps` audits the whole tree, including devDependencies: on this static
 site every package is build tooling, so the dev/prod split is not a deployment
 boundary. Moderate and low findings print without failing; triage them by
-reachability as in `docs/audits/2026-10-12/dependency-triage.md`.
+whether the vulnerable code can see untrusted input. The image pipeline only
+processes images committed to `src/assets/`, so review the current sharp and
+Astro image advisories before adding remote, CMS-sourced or uploaded images.
 
 No test suite or linter is configured. Verify changes with `npm run build`
 and, for anything visual, `npm run dev` + a browser check.
@@ -89,8 +93,13 @@ repo gains those scripts.
   explicitly requested. Keep distribution artwork separate from web derivatives
   in `src/assets/` and `public/`; do not copy WAV masters into the repository.
 - Put media format/provenance notes in the asset project's README files. Keep
-  build/deploy instructions and coding guidance here. Use `docs/assets.md` for
-  the boundary and handoff workflow, rather than duplicating album track data.
+  build/deploy instructions and coding guidance here.
+- To publish an asset, keep the master in the working project and add a web
+  derivative to `src/assets/` (Astro-processed) or `public/` (exact static
+  filename). Record its source when replacing a derivative.
+- Album metadata comes from the released Spotify listing, not the WAVs: don't
+  take track order from alphabetical WAV filenames or overwrite released
+  timings with rounded WAV durations.
 
 - Keep the site static except for `POST /api/contact`; it is a Pages Function
   because the Email Sending token cannot ship to the browser. Do not add other
@@ -139,8 +148,9 @@ repo gains those scripts.
 - Log only through `log()`. Events carry the operation, outcome, statuses, a
   sanitized code and a request ID. Never log names, emails, subjects,
   messages, tokens, IP addresses or raw upstream text.
-- `docs/operations.md` records limits, log format and the verified and
-  recommended Cloudflare rate-limit and alert settings. Keep it current.
+- `docs/operations.md` records the log format and the Cloudflare dashboard
+  settings (rate-limiting rule, sending quota, Email preview). Keep it current
+  when the log fields or those settings change.
 - `CLOUDFLARE_ACCOUNT_ID` is plaintext in `wrangler.toml`. The API token and
   `TURNSTILE_SECRET` are Pages secrets and must never be committed.
 - The public production Turnstile site key has a committed fallback in
