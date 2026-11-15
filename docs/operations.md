@@ -31,7 +31,19 @@ logged. A 5xx response body includes a `requestId` that matches the event's
 Pages Functions logs are real-time only ("Logs are not stored"): watch them
 with `npx wrangler pages deployment tail` or the dashboard's Functions log
 stream. They are hidden above 100 requests/s. Nothing alerts on delivery
-failures yet; see [issue #33](https://github.com/jmusick/jd-musick/issues/33).
+failures, so use the routine below to catch them.
+
+## Delivery check
+
+A revoked API token, an Email Sending domain problem or a Turnstile
+misconfiguration would fail the form for every visitor, and the first sign
+would be missing mail. To catch that:
+
+1. After each deploy, and about once a month, send a real test message
+   through the live contact form on `jdmusick.band`.
+2. Confirm it arrives in the artist's inbox. If it doesn't, check the Email
+   Sending Activity log, then tail the Function logs for `delivery_rejected`,
+   `timeout`, `upstream_unavailable` or `config_error` events.
 
 ## Cloudflare settings
 
