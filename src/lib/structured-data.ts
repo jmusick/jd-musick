@@ -42,7 +42,7 @@ export function albumEntity(imageUrl: string) {
 		url: ALBUM_URL,
 		image: imageUrl,
 		genre: SITE_GENRES,
-		...(ALBUM.releaseDate && { datePublished: ALBUM.releaseDate }),
+		datePublished: ALBUM.releaseDate,
 		numTracks: TRACK_COUNT,
 		byArtist: artistRef,
 		// Streaming pages for this album; deliberately not on the artist.

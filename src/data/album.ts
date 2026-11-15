@@ -1,15 +1,15 @@
 /**
  * "The Road Still Knows" — the debut album.
  *
- * Track order is a proposed sequence, not a confirmed master order; durations
- * are read from the source WAVs in the project assets folder. Adjust `tracks`
- * here and the Music page follows.
+ * The released Spotify album is the source of truth for track order and
+ * durations, not the WAV masters. Adjust `tracks` here and the Music page
+ * follows.
  */
 
 export interface Track {
 	n: number;
 	title: string;
-	/** mm:ss, from the source WAV header. */
+	/** mm:ss, as listed on the released album. */
 	duration: string;
 	/** One line of context for the Music page. */
 	note: string;
@@ -20,7 +20,7 @@ export const ALBUM = {
 	kind: "Album",
 	status: "Out now",
 	year: 2026,
-	releaseDate: "2026-09-04" as string | null,
+	releaseDate: "2026-09-04",
 	blurb:
 		"Eleven late-night songs about regret, reckoning, reassurance, and hard-won love. Smoky guitar and warm organ back a weathered voice.",
 	spotifyUrl: "https://open.spotify.com/album/1af7jVOhvyLZJTOLxoX3rx",
@@ -58,13 +58,11 @@ export function toIsoDuration(duration: string): string {
 	return `PT${m}M${s}S`;
 }
 
-/** Long-form release date ("September 4, 2026"), or null while unannounced. */
-export function formatReleaseDate(): string | null {
-	return ALBUM.releaseDate
-		? new Date(`${ALBUM.releaseDate}T00:00:00`).toLocaleDateString("en-US", {
-				year: "numeric",
-				month: "long",
-				day: "numeric",
-			})
-		: null;
+/** Long-form release date ("September 4, 2026"). */
+export function formatReleaseDate(): string {
+	return new Date(`${ALBUM.releaseDate}T00:00:00`).toLocaleDateString("en-US", {
+		year: "numeric",
+		month: "long",
+		day: "numeric",
+	});
 }

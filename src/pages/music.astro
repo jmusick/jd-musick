@@ -13,7 +13,7 @@ const structuredData = albumEntity(new URL(coverForSchema.src, SITE_URL).href);
 
 const releaseDate = formatReleaseDate();
 const title = `${ALBUM.title} — ${SITE_NAME} | Music`;
-const description = `${ALBUM.title}, the debut ${SITE_GENRE_PHRASE} album by ${SITE_NAME}${releaseDate ? `, released ${releaseDate}` : ""}. Tracklist, runtime, and where to listen.`;
+const description = `${ALBUM.title}, the debut ${SITE_GENRE_PHRASE} album by ${SITE_NAME}, released ${releaseDate}. Tracklist, runtime, and where to listen.`;
 ---
 
 <Layout
@@ -39,12 +39,10 @@ const description = `${ALBUM.title}, the debut ${SITE_GENRE_PHRASE} album by ${S
 					<span>{ALBUM.kind}</span>
 					<span>{TRACK_COUNT} tracks</span>
 					<span>{ALBUM_RUNTIME}</span>
-					<span>
-						{releaseDate ?? `${ALBUM.year} · date TBA`}
-					</span>
+					<span>{releaseDate}</span>
 				</div>
 
-				{ACTIVE_SOCIALS.length > 0 ? (
+				{ACTIVE_SOCIALS.length > 0 && (
 					<div class="hero-cta">
 						{ACTIVE_SOCIALS.map((s) => (
 							<a class="btn btn-secondary" href={s.href} target="_blank" rel="noopener noreferrer">
@@ -52,10 +50,6 @@ const description = `${ALBUM.title}, the debut ${SITE_GENRE_PHRASE} album by ${S
 							</a>
 						))}
 					</div>
-				) : (
-					<p style="color: var(--ink-3)">
-						Streaming links go live with the record.
-					</p>
 				)}
 			</div>
 		</div>
