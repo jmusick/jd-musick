@@ -18,29 +18,20 @@
 	--ink-1: #f4ead8;
 	--ink-2: #c8bca8;
 	--ink-3: #8d806e;
-	--magenta: #d94f26;
-	--magenta-dim: #97371f;
-	--blue: #d94f26;
-	--blue-dim: #97371f;
-	--violet: #7f201d;
-	--cyan: #e5865f;
+	--ember: #d94f26;
+	--rust: #7f201d;
+	--ember-light: #e5865f;
 	--success: #f4ead8;
-	--warning: #e5865f;
 	--error: #ee653c;
 
 	--bg-page: var(--void);
 	--bg-surface: var(--surface);
-	--bg-surface-raised: var(--surface-2);
 	--border-hairline: var(--surface-border);
 	--text-primary: var(--ink-1);
 	--text-secondary: var(--ink-2);
-	--text-tertiary: var(--ink-3);
-	--accent-primary: var(--magenta);
-	--accent-secondary: var(--blue);
-	--accent-tertiary: var(--violet);
-	--link: var(--cyan);
+	--link: var(--ember-light);
 	--link-hover: #ffc0a5;
-	--gradient-neon: linear-gradient(90deg, #7f201d, #d94f26, #e0b467);
+	--gradient-ember: linear-gradient(90deg, #7f201d, #d94f26, #e0b467);
 }
 
 /* ── Tokens: type ────────────────────────────── */
@@ -52,7 +43,6 @@
 	--font-brand: "Bebas Neue", "Arial Narrow", sans-serif;
 
 	--text-display-1: clamp(48px, 7vw, 96px);
-	--text-display-2: clamp(36px, 5vw, 64px);
 	--text-h1: 40px;
 	--text-h2: 30px;
 	--text-h3: 22px;
@@ -83,24 +73,19 @@
 	--space-7: 48px;
 	--space-8: 64px;
 	--space-9: 96px;
-	--space-10: 144px;
 	--container-max: 1200px;
-	--container-pad: 24px;
 
 	--radius-sm: 4px;
 	--radius-md: 10px;
 	--radius-lg: 20px;
 	--radius-pill: 999px;
 
-	--glow-magenta: 0 12px 36px rgba(217, 79, 38, 0.24);
-	--glow-blue: 0 12px 36px rgba(217, 79, 38, 0.2);
-	--glow-violet: 0 12px 36px rgba(127, 32, 29, 0.22);
+	--glow-ember: 0 12px 36px rgba(217, 79, 38, 0.2);
 	--shadow-card: 0 12px 32px rgba(0, 0, 0, 0.55);
 	--shadow-card-hover: 0 20px 48px rgba(217, 79, 38, 0.18), 0 12px 32px rgba(0, 0, 0, 0.6);
 
 	--blur-glass: blur(16px);
 	--ease-out: cubic-bezier(0.16, 1, 0.3, 1);
-	--ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
 	--duration-fast: 120ms;
 	--duration-base: 220ms;
 	--duration-slow: 420ms;
@@ -190,7 +175,7 @@ img {
 }
 
 :focus-visible {
-	outline: 2px solid var(--cyan);
+	outline: 2px solid var(--ember-light);
 	outline-offset: 3px;
 	border-radius: var(--radius-sm);
 }
@@ -287,7 +272,7 @@ img {
 
 .site-nav a.active {
 	color: var(--ink-1);
-	border-bottom-color: var(--magenta);
+	border-bottom-color: var(--ember);
 }
 
 .nav-toggle {
@@ -352,8 +337,8 @@ img {
 }
 
 .social-link:hover {
-	color: var(--cyan);
-	border-color: var(--cyan);
+	color: var(--ember-light);
+	border-color: var(--ember-light);
 }
 
 /* ── Buttons (port of Button.jsx) ────────────── */
@@ -389,7 +374,7 @@ img {
 }
 
 .btn-primary {
-	background: var(--magenta);
+	background: var(--ember);
 	color: var(--void-2);
 	box-shadow: 5px 5px 0 #5b1e16;
 }
@@ -403,12 +388,12 @@ img {
 .btn-secondary {
 	background: transparent;
 	color: var(--ink-1);
-	box-shadow: inset 0 0 0 1.5px var(--blue);
+	box-shadow: inset 0 0 0 1.5px var(--ember);
 }
 
 .btn-secondary:hover {
 	color: var(--ink-1);
-	box-shadow: 4px 4px 0 rgba(127,32,29,.32), inset 0 0 0 1.5px var(--blue);
+	box-shadow: 4px 4px 0 rgba(127,32,29,.32), inset 0 0 0 1.5px var(--ember);
 	transform: translateY(-1px);
 }
 
@@ -440,19 +425,19 @@ img {
 	text-transform: uppercase;
 	padding: 5px 12px;
 	border-radius: 2px;
-	color: var(--magenta);
-	border: 1px solid var(--magenta);
+	color: var(--ember);
+	border: 1px solid var(--ember);
 }
 
 .badge-filled {
 	color: var(--void-2);
-	background: var(--magenta);
+	background: var(--ember);
 	border: none;
 }
 
 .badge-blue {
-	color: var(--blue);
-	border-color: var(--blue);
+	color: var(--ember);
+	border-color: var(--ember);
 }
 
 .badge-neutral {
@@ -477,7 +462,7 @@ img {
 	font-weight: 600;
 	letter-spacing: var(--tracking-widest);
 	text-transform: uppercase;
-	color: var(--cyan);
+	color: var(--ember-light);
 }
 
 .lede {
@@ -497,7 +482,7 @@ img {
 	height: 1px;
 	border: 0;
 	margin: var(--space-7) 0;
-	background: var(--gradient-neon);
+	background: var(--gradient-ember);
 	opacity: 0.35;
 }
 
@@ -679,7 +664,7 @@ img {
 }
 
 .site-footer a:hover {
-	color: var(--cyan);
+	color: var(--ember-light);
 }
 
 .footer-mark {
@@ -771,7 +756,7 @@ img {
 	}
 
 	.site-nav a.active {
-		border-bottom-color: var(--magenta);
+		border-bottom-color: var(--ember);
 	}
 
 	.site-head-divider {
