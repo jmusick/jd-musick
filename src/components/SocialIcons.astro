@@ -1,0 +1,20 @@
+---
+import { Icon } from "astro-icon/components";
+import { ACTIVE_SOCIALS } from "../config/site";
+---
+
+{ACTIVE_SOCIALS.length > 0 && (
+	<nav class="social-nav" aria-label="Social media">
+		{ACTIVE_SOCIALS.map((s) => (
+			<a
+				href={s.href}
+				target="_blank"
+				rel="noopener noreferrer"
+				aria-label={s.label}
+				class="social-link"
+			>
+				<Icon name={s.icon} aria-hidden="true" />
+			</a>
+		))}
+	</nav>
+)}

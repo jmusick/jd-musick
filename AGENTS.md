@@ -35,7 +35,8 @@ server-side route. Read `README.md` before changing visual styling or public cop
 
 - `src/pages/` — routes (`index.astro`, `about.astro`, `music.astro`,
   `contact.astro`, `privacy-policy.astro`, `404.astro`).
-- `src/components/` — `SiteHeader.astro`, `SiteFooter.astro`.
+- `src/components/` — `SiteHeader.astro`, `SiteFooter.astro`, and `SocialIcons.astro`
+  (the icon nav from `ACTIVE_SOCIALS`, shared by the header, footer and Contact page).
 - `src/layouts/Layout.astro` — shared page shell.
 - `src/config/site.ts` — single source of truth for site URL, name, tagline,
   and `SOCIALS` (streaming/social links). Entries with `href: null` are

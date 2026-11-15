@@ -1,6 +1,7 @@
 ---
 import { Icon } from "astro-icon/components";
 import { ACTIVE_SOCIALS, SITE_NAME } from "../config/site";
+import SocialIcons from "./SocialIcons.astro";
 
 interface Props {
 	active?: "home" | "music" | "about" | "contact";
@@ -43,19 +44,7 @@ const { active = "home" } = Astro.props;
 			{ACTIVE_SOCIALS.length > 0 && (
 				<>
 					<div class="site-head-divider" aria-hidden="true"></div>
-					<nav class="social-nav" aria-label="Social media">
-						{ACTIVE_SOCIALS.map((s) => (
-							<a
-								href={s.href}
-								target="_blank"
-								rel="noopener noreferrer"
-								aria-label={s.label}
-								class="social-link"
-							>
-								<Icon name={s.icon} aria-hidden="true" />
-							</a>
-						))}
-					</nav>
+					<SocialIcons />
 				</>
 			)}
 		</div>
