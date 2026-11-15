@@ -14,6 +14,9 @@ const title = `${SITE_NAME} — ${ALBUM.title} | Electric Blues & Soul`;
 const description = `${SITE_NAME} is an ${SITE_GENRE_PHRASE} artist. Hear the debut album ${ALBUM.title}, ${ALBUM.status.toLowerCase()}: ${TRACK_COUNT} songs, ${ALBUM_RUNTIME} of late-night stories.`;
 
 const spotifyAlbumId = ALBUM.spotifyUrl.match(/open\.spotify\.com\/album\/([A-Za-z0-9]+)/)?.[1];
+if (!spotifyAlbumId) {
+	throw new Error(`ALBUM.spotifyUrl must look like https://open.spotify.com/album/<id>; got "${ALBUM.spotifyUrl}"`);
+}
 const spotifyEmbedUrl = `https://open.spotify.com/embed/album/${spotifyAlbumId}?utm_source=generator&theme=0`;
 const spotifyEmbedHeight = Math.min(760, Math.max(352, 170 + ALBUM.tracks.length * 34));
 ---

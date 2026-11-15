@@ -1,4 +1,5 @@
 import pkg from "../../package.json";
+import { ALBUM } from "../data/album";
 
 /** Sourced from package.json — bump the version there (and tag the release to match) to update this everywhere. */
 export const SITE_VERSION: string = pkg.version;
@@ -47,7 +48,7 @@ export interface SocialLink {
 }
 
 export const SOCIALS: SocialLink[] = [
-	{ label: "Spotify", href: "https://open.spotify.com/album/1af7jVOhvyLZJTOLxoX3rx", icon: "simple-icons:spotify", target: "album" },
+	{ label: "Spotify", href: ALBUM.spotifyUrl, icon: "simple-icons:spotify", target: "album" },
 	{ label: "Apple Music", href: "https://music.apple.com/us/album/the-road-still-knows/6806432947", icon: "simple-icons:applemusic", target: "album" },
 	{ label: "YouTube", href: null, icon: "simple-icons:youtube" },
 	{ label: "SoundCloud", href: null, icon: "simple-icons:soundcloud" },
