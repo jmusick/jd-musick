@@ -1,0 +1,452 @@
+{
+	"schemaVersion": 2,
+	"generatedAt": "2026-11-16T02:26:11.418Z",
+	"title": "Design System: JD Musick",
+	"extensions": {
+		"colorMeta": {
+			"last-call-black": {
+				"role": "neutral",
+				"displayName": "Last-Call Black",
+				"canonical": "oklch(14.4% 0.005 106.953)",
+				"tonalRamp": [
+					"oklch(15.0% 0.001 106.953)",
+					"oklch(26.4% 0.002 106.953)",
+					"oklch(37.9% 0.004 106.953)",
+					"oklch(49.3% 0.005 106.953)",
+					"oklch(60.7% 0.005 106.953)",
+					"oklch(72.1% 0.003 106.953)",
+					"oklch(83.6% 0.002 106.953)",
+					"oklch(95.0% 0.001 106.953)"
+				]
+			},
+			"back-booth-black": {
+				"role": "neutral",
+				"displayName": "Back-Booth Black",
+				"canonical": "oklch(17.6% 0.006 107)",
+				"tonalRamp": [
+					"oklch(15.0% 0.001 107)",
+					"oklch(26.4% 0.003 107)",
+					"oklch(37.9% 0.005 107)",
+					"oklch(49.3% 0.006 107)",
+					"oklch(60.7% 0.006 107)",
+					"oklch(72.1% 0.004 107)",
+					"oklch(83.6% 0.002 107)",
+					"oklch(95.0% 0.001 107)"
+				]
+			},
+			"blackened-wood": {
+				"role": "neutral",
+				"displayName": "Blackened Wood",
+				"canonical": "oklch(20.3% 0.008 107.068)",
+				"tonalRamp": [
+					"oklch(15.0% 0.001 107.068)",
+					"oklch(26.4% 0.004 107.068)",
+					"oklch(37.9% 0.006 107.068)",
+					"oklch(49.3% 0.008 107.068)",
+					"oklch(60.7% 0.008 107.068)",
+					"oklch(72.1% 0.006 107.068)",
+					"oklch(83.6% 0.003 107.068)",
+					"oklch(95.0% 0.001 107.068)"
+				]
+			},
+			"old-varnish": {
+				"role": "neutral",
+				"displayName": "Old Varnish",
+				"canonical": "oklch(33.4% 0.021 88.075)",
+				"tonalRamp": [
+					"oklch(15.0% 0.003 88.075)",
+					"oklch(26.4% 0.01 88.075)",
+					"oklch(37.9% 0.017 88.075)",
+					"oklch(49.3% 0.021 88.075)",
+					"oklch(60.7% 0.021 88.075)",
+					"oklch(72.1% 0.016 88.075)",
+					"oklch(83.6% 0.009 88.075)",
+					"oklch(95.0% 0.003 88.075)"
+				]
+			},
+			"aged-cream": {
+				"role": "neutral",
+				"displayName": "Aged Cream",
+				"canonical": "oklch(94.0% 0.026 82.385)",
+				"tonalRamp": [
+					"oklch(15.0% 0.004 82.385)",
+					"oklch(26.4% 0.012 82.385)",
+					"oklch(37.9% 0.021 82.385)",
+					"oklch(49.3% 0.026 82.385)",
+					"oklch(60.7% 0.026 82.385)",
+					"oklch(72.1% 0.019 82.385)",
+					"oklch(83.6% 0.011 82.385)",
+					"oklch(95.0% 0.004 82.385)"
+				]
+			},
+			"faded-cream": {
+				"role": "neutral",
+				"displayName": "Faded Cream",
+				"canonical": "oklch(80.0% 0.031 80.628)",
+				"tonalRamp": [
+					"oklch(15.0% 0.005 80.628)",
+					"oklch(26.4% 0.014 80.628)",
+					"oklch(37.9% 0.024 80.628)",
+					"oklch(49.3% 0.031 80.628)",
+					"oklch(60.7% 0.031 80.628)",
+					"oklch(72.1% 0.023 80.628)",
+					"oklch(83.6% 0.013 80.628)",
+					"oklch(95.0% 0.005 80.628)"
+				]
+			},
+			"ash-tan": {
+				"role": "neutral",
+				"displayName": "Ash Tan",
+				"canonical": "oklch(60.6% 0.031 76.019)",
+				"tonalRamp": [
+					"oklch(15.0% 0.005 76.019)",
+					"oklch(26.4% 0.014 76.019)",
+					"oklch(37.9% 0.024 76.019)",
+					"oklch(49.3% 0.031 76.019)",
+					"oklch(60.7% 0.031 76.019)",
+					"oklch(72.1% 0.023 76.019)",
+					"oklch(83.6% 0.013 76.019)",
+					"oklch(95.0% 0.005 76.019)"
+				]
+			},
+			"ember-orange": {
+				"role": "primary",
+				"displayName": "Ember Orange",
+				"canonical": "oklch(60.9% 0.181 36.501)",
+				"tonalRamp": [
+					"oklch(15.0% 0.027 36.501)",
+					"oklch(26.4% 0.085 36.501)",
+					"oklch(37.9% 0.144 36.501)",
+					"oklch(49.3% 0.181 36.501)",
+					"oklch(60.7% 0.181 36.501)",
+					"oklch(72.1% 0.134 36.501)",
+					"oklch(83.6% 0.075 36.501)",
+					"oklch(95.0% 0.027 36.501)"
+				]
+			},
+			"ember-glow": {
+				"role": "primary",
+				"displayName": "Ember Glow",
+				"canonical": "oklch(71.4% 0.128 42.704)",
+				"tonalRamp": [
+					"oklch(15.0% 0.019 42.704)",
+					"oklch(26.4% 0.06 42.704)",
+					"oklch(37.9% 0.102 42.704)",
+					"oklch(49.3% 0.128 42.704)",
+					"oklch(60.7% 0.128 42.704)",
+					"oklch(72.1% 0.095 42.704)",
+					"oklch(83.6% 0.053 42.704)",
+					"oklch(95.0% 0.019 42.704)"
+				]
+			},
+			"hot-coal": {
+				"role": "primary",
+				"displayName": "Hot Coal",
+				"canonical": "oklch(85.8% 0.082 44.244)",
+				"tonalRamp": [
+					"oklch(15.0% 0.012 44.244)",
+					"oklch(26.4% 0.038 44.244)",
+					"oklch(37.9% 0.065 44.244)",
+					"oklch(49.3% 0.082 44.244)",
+					"oklch(60.7% 0.082 44.244)",
+					"oklch(72.1% 0.06 44.244)",
+					"oklch(83.6% 0.034 44.244)",
+					"oklch(95.0% 0.012 44.244)"
+				]
+			},
+			"flare": {
+				"role": "primary",
+				"displayName": "Flare",
+				"canonical": "oklch(67.2% 0.179 37.108)",
+				"tonalRamp": [
+					"oklch(15.0% 0.027 37.108)",
+					"oklch(26.4% 0.084 37.108)",
+					"oklch(37.9% 0.142 37.108)",
+					"oklch(49.3% 0.179 37.108)",
+					"oklch(60.7% 0.179 37.108)",
+					"oklch(72.1% 0.132 37.108)",
+					"oklch(83.6% 0.074 37.108)",
+					"oklch(95.0% 0.027 37.108)"
+				]
+			},
+			"wet-brick-rust": {
+				"role": "secondary",
+				"displayName": "Wet-Brick Rust",
+				"canonical": "oklch(39.9% 0.13 26.802)",
+				"tonalRamp": [
+					"oklch(15.0% 0.02 26.802)",
+					"oklch(26.4% 0.061 26.802)",
+					"oklch(37.9% 0.104 26.802)",
+					"oklch(49.3% 0.13 26.802)",
+					"oklch(60.7% 0.13 26.802)",
+					"oklch(72.1% 0.096 26.802)",
+					"oklch(83.6% 0.054 26.802)",
+					"oklch(95.0% 0.02 26.802)"
+				]
+			},
+			"scorched-rust": {
+				"role": "secondary",
+				"displayName": "Scorched Rust",
+				"canonical": "oklch(32.8% 0.092 30.173)",
+				"tonalRamp": [
+					"oklch(15.0% 0.014 30.173)",
+					"oklch(26.4% 0.043 30.173)",
+					"oklch(37.9% 0.073 30.173)",
+					"oklch(49.3% 0.092 30.173)",
+					"oklch(60.7% 0.092 30.173)",
+					"oklch(72.1% 0.068 30.173)",
+					"oklch(83.6% 0.038 30.173)",
+					"oklch(95.0% 0.014 30.173)"
+				]
+			}
+		},
+		"typographyMeta": {
+			"brand": {
+				"displayName": "Brand",
+				"purpose": "The JD MUSICK wordmark in the header only."
+			},
+			"display": {
+				"displayName": "Display",
+				"purpose": "Home hero title only: uppercase, pure white, rust offset shadow."
+			},
+			"headline": {
+				"displayName": "Headline",
+				"purpose": "Page h1."
+			},
+			"title": {
+				"displayName": "Title",
+				"purpose": "Section h2."
+			},
+			"subtitle": {
+				"displayName": "Subtitle",
+				"purpose": "h3 and policy section heads."
+			},
+			"lede": {
+				"displayName": "Lede",
+				"purpose": "Intro paragraphs, bio and input text; max 60ch."
+			},
+			"body": {
+				"displayName": "Body",
+				"purpose": "Default copy in Faded Cream."
+			},
+			"button": {
+				"displayName": "Button",
+				"purpose": "Uppercase button labels."
+			},
+			"label": {
+				"displayName": "Label",
+				"purpose": "Eyebrows and badges."
+			},
+			"nav": {
+				"displayName": "Nav",
+				"purpose": "Primary navigation links."
+			},
+			"footer-mark": {
+				"displayName": "Footer Mark",
+				"purpose": "The artist name in the footer only."
+			}
+		},
+		"shadows": [
+			{
+				"name": "card",
+				"value": "0 12px 32px rgba(0, 0, 0, 0.55)",
+				"purpose": "Album cover at rest."
+			},
+			{
+				"name": "card-hover",
+				"value": "0 20px 48px rgba(217, 79, 38, 0.18), 0 12px 32px rgba(0, 0, 0, 0.6)",
+				"purpose": "Album cover on hover, with a 4px lift."
+			},
+			{
+				"name": "form-ambient",
+				"value": "0 0 44px rgba(217, 79, 38, 0.09), 0 12px 32px rgba(0, 0, 0, 0.55)",
+				"purpose": "Contact form panel."
+			},
+			{
+				"name": "glow-ember",
+				"value": "0 12px 36px rgba(217, 79, 38, 0.2)",
+				"purpose": "Focused inputs, paired with a 2px ember ring."
+			},
+			{
+				"name": "offset-primary",
+				"value": "5px 5px 0 #5b1e16",
+				"purpose": "Primary button. Incidental, not a rule."
+			},
+			{
+				"name": "offset-secondary-hover",
+				"value": "4px 4px 0 rgba(127, 32, 29, 0.32)",
+				"purpose": "Secondary button hover."
+			},
+			{
+				"name": "offset-text",
+				"value": "4px 4px 0 rgba(127, 32, 29, 0.72)",
+				"purpose": "Hero title text-shadow (2px on the wordmark)."
+			}
+		],
+		"motion": [
+			{
+				"name": "ease-out",
+				"value": "cubic-bezier(0.16, 1, 0.3, 1)",
+				"purpose": "Every transition."
+			},
+			{
+				"name": "duration-fast",
+				"value": "120ms",
+				"purpose": "Color changes, button lift, icon swaps."
+			},
+			{
+				"name": "duration-base",
+				"value": "220ms",
+				"purpose": "Shadows, backgrounds, nav underline, row hover."
+			},
+			{
+				"name": "duration-slow",
+				"value": "420ms",
+				"purpose": "Mobile menu expand and collapse."
+			}
+		],
+		"breakpoints": [
+			{
+				"name": "mobile",
+				"value": "480px"
+			},
+			{
+				"name": "tablet",
+				"value": "900px"
+			}
+		]
+	},
+	"components": [
+		{
+			"name": "Primary Button",
+			"kind": "button",
+			"refersTo": "button-primary",
+			"description": "The one main action in a group, such as Listen on Spotify or Send message.",
+			"html": "<button class=\"ds-btn-primary\">Listen on Spotify</button>",
+			"css": ".ds-btn-primary { font-family: var(--font-body); font-weight: 700; letter-spacing: var(--tracking-wide); text-transform: uppercase; font-size: 15px; padding: 13px 28px; border: none; border-radius: var(--radius-sm); cursor: pointer; transition: transform var(--duration-fast) var(--ease-out), box-shadow var(--duration-base) var(--ease-out), background var(--duration-base) var(--ease-out), color var(--duration-base) var(--ease-out); background: var(--ember); color: var(--void-2); box-shadow: 5px 5px 0 #5b1e16; } .ds-btn-primary:hover { background: #ee653c; transform: translateY(-1px); } .ds-btn-primary:focus-visible { outline: 2px solid var(--ember-light); outline-offset: 3px; }"
+		},
+		{
+			"name": "Secondary Button",
+			"kind": "button",
+			"refersTo": "button-secondary",
+			"description": "The action beside the primary, with an inset ember outline.",
+			"html": "<button class=\"ds-btn-secondary\">Explore the record</button>",
+			"css": ".ds-btn-secondary { font-family: var(--font-body); font-weight: 700; letter-spacing: var(--tracking-wide); text-transform: uppercase; font-size: 15px; padding: 13px 28px; border: none; border-radius: var(--radius-sm); cursor: pointer; transition: transform var(--duration-fast) var(--ease-out), box-shadow var(--duration-base) var(--ease-out), background var(--duration-base) var(--ease-out), color var(--duration-base) var(--ease-out); background: transparent; color: var(--ink-1); box-shadow: inset 0 0 0 1.5px var(--ember); } .ds-btn-secondary:hover { box-shadow: 4px 4px 0 rgba(127,32,29,.32), inset 0 0 0 1.5px var(--ember); transform: translateY(-1px); } .ds-btn-secondary:focus-visible { outline: 2px solid var(--ember-light); outline-offset: 3px; }"
+		},
+		{
+			"name": "Ghost Button",
+			"kind": "button",
+			"refersTo": "button-ghost",
+			"description": "Equal-weight outbound links, such as the About page's Elsewhere list.",
+			"html": "<button class=\"ds-btn-ghost\">Apple Music</button>",
+			"css": ".ds-btn-ghost { font-family: var(--font-body); font-weight: 700; letter-spacing: var(--tracking-wide); text-transform: uppercase; font-size: 15px; padding: 13px 28px; border: none; border-radius: var(--radius-sm); cursor: pointer; transition: transform var(--duration-fast) var(--ease-out), box-shadow var(--duration-base) var(--ease-out), background var(--duration-base) var(--ease-out), color var(--duration-base) var(--ease-out); background: transparent; color: var(--ink-2); box-shadow: inset 0 0 0 1px var(--border-hairline); } .ds-btn-ghost:hover { color: var(--ink-1); box-shadow: inset 0 0 0 1px var(--ink-2); } .ds-btn-ghost:focus-visible { outline: 2px solid var(--ember-light); outline-offset: 3px; }"
+		},
+		{
+			"name": "Release Badge",
+			"kind": "chip",
+			"refersTo": "badge",
+			"description": "Release status label, outlined or filled in ember.",
+			"html": "<span class=\"ds-badge\">Out now</span> <span class=\"ds-badge ds-badge-filled\">Debut Album · Out now</span>",
+			"css": ".ds-badge { display: inline-flex; align-items: center; font-family: var(--font-body); font-weight: 600; font-size: var(--text-micro); letter-spacing: var(--tracking-widest); text-transform: uppercase; padding: 5px 12px; border-radius: 2px; color: var(--ember); border: 1px solid var(--ember); } .ds-badge-filled { color: var(--void-2); background: var(--ember); }"
+		},
+		{
+			"name": "Text Field",
+			"kind": "input",
+			"refersTo": "input",
+			"description": "Contact-form field: a dark well with an uppercase label and an ember focus glow.",
+			"html": "<label class=\"ds-field\"><span class=\"ds-field-label\">Email</span><input class=\"ds-input\" type=\"email\"><span class=\"ds-field-hint\">Used only to reply to your message.</span></label>",
+			"css": ".ds-field { display: flex; flex-direction: column; gap: 8px; font-family: var(--font-body); } .ds-field-label { font-weight: 700; letter-spacing: var(--tracking-wide); text-transform: uppercase; color: var(--ink-1); } .ds-field-hint { font-size: var(--text-body-sm); color: var(--ink-3); } .ds-input { width: 100%; border: 1px solid var(--border-hairline); border-radius: var(--radius-sm); background: var(--void-2); color: var(--ink-1); font: inherit; font-size: var(--text-body-lg); padding: 12px 16px; transition: border-color var(--duration-base) var(--ease-out), box-shadow var(--duration-base) var(--ease-out); } .ds-input:focus-visible { outline: none; border-color: var(--ember-light); box-shadow: 0 0 0 2px rgba(217,79,38,.18), var(--glow-ember); }"
+		},
+		{
+			"name": "Primary Navigation",
+			"kind": "nav",
+			"refersTo": "nav-link",
+			"description": "Tracked uppercase links; the active page gets cream text and an ember underline.",
+			"html": "<nav class=\"ds-nav\"><a href=\"#\" class=\"ds-nav-active\">Home</a><a href=\"#\">Music</a><a href=\"#\">About</a><a href=\"#\">Contact</a></nav>",
+			"css": ".ds-nav { display: flex; gap: 8px; } .ds-nav a { font-family: var(--font-body); font-size: var(--text-body-sm); font-weight: 600; letter-spacing: var(--tracking-widest); text-transform: uppercase; color: var(--ink-3); text-decoration: none; padding: 8px 12px; border-bottom: 2px solid transparent; transition: color var(--duration-base) var(--ease-out), border-color var(--duration-base) var(--ease-out); } .ds-nav a:hover { color: var(--ink-1); } .ds-nav a.ds-nav-active { color: var(--ink-1); border-bottom-color: var(--ember); } .ds-nav a:focus-visible { outline: 2px solid var(--ember-light); outline-offset: 3px; }"
+		},
+		{
+			"name": "Social Icon Button",
+			"kind": "custom",
+			"refersTo": "social-link",
+			"description": "40px outlined circle around a brand glyph; shown only for live profiles.",
+			"html": "<a class=\"ds-social\" href=\"#\" aria-label=\"Spotify\"><svg viewBox=\"0 0 24 24\" width=\"18\" height=\"18\" fill=\"currentColor\" aria-hidden=\"true\"><path d=\"M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.52 17.34c-.24.36-.66.48-1.02.24-2.82-1.74-6.36-2.1-10.56-1.14-.42.12-.78-.18-.9-.54-.12-.42.18-.78.54-.9 4.56-1.02 8.52-.6 11.64 1.32.42.18.48.66.3 1.02zm1.44-3.3c-.3.42-.84.6-1.26.3-3.24-1.98-8.16-2.58-11.94-1.38-.48.12-1.02-.12-1.14-.6-.12-.48.12-1.02.6-1.14C9.6 9.9 15 10.56 18.72 12.84c.36.18.54.78.24 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.3c-.6.18-1.2-.18-1.38-.72-.18-.6.18-1.2.72-1.38 4.26-1.26 11.28-1.02 15.72 1.62.54.3.72 1.02.42 1.56-.3.42-1.02.6-1.56.3z\"/></svg></a>",
+			"css": ".ds-social { display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px; border-radius: var(--radius-pill); border: 1px solid var(--border-hairline); color: var(--ink-2); transition: color var(--duration-fast) var(--ease-out), border-color var(--duration-fast) var(--ease-out); } .ds-social:hover { color: var(--ember-light); border-color: var(--ember-light); } .ds-social:focus-visible { outline: 2px solid var(--ember-light); outline-offset: 3px; }"
+		},
+		{
+			"name": "Panel",
+			"kind": "card",
+			"refersTo": "panel",
+			"description": "Raised Blackened Wood container with a hairline border and large corners.",
+			"html": "<div class=\"ds-panel\"><p class=\"ds-panel-lede\">Eleven late-night songs about regret, reckoning, reassurance, and hard-won love.</p></div>",
+			"css": ".ds-panel { background: var(--bg-surface); border: 1px solid var(--border-hairline); border-radius: var(--radius-lg); padding: clamp(20px, 3vw, 32px); } .ds-panel-lede { margin: 0; font-family: var(--font-body); font-size: var(--text-body-lg); line-height: var(--lh-body); color: var(--ink-2); max-width: 60ch; }"
+		},
+		{
+			"name": "Track Row",
+			"kind": "custom",
+			"refersTo": "track-row",
+			"description": "Signature ruled tracklist row: number, condensed title with note, duration.",
+			"html": "<ol class=\"ds-tracklist\"><li class=\"ds-track\"><span class=\"ds-track-n\">01</span><span><span class=\"ds-track-title\">She Left Me the Jukebox</span><span class=\"ds-track-note\">Heartbreak with the bar still open.</span></span><span class=\"ds-track-time\">5:42</span></li><li class=\"ds-track\"><span class=\"ds-track-n\">02</span><span><span class=\"ds-track-title\">Matchbook Man</span><span class=\"ds-track-note\">Fire, memory, and self-reckoning.</span></span><span class=\"ds-track-time\">6:41</span></li></ol>",
+			"css": ".ds-tracklist { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--border-hairline); font-family: var(--font-body); } .ds-track { display: grid; grid-template-columns: 2.5rem 1fr auto; align-items: baseline; gap: 16px; padding: 16px 12px; border-bottom: 1px solid var(--border-hairline); transition: background var(--duration-base) var(--ease-out); } .ds-track:hover { background: rgba(127,32,29,.3); } .ds-track-n, .ds-track-time { font-size: var(--text-body-sm); color: var(--ink-3); font-variant-numeric: tabular-nums; } .ds-track-n { letter-spacing: var(--tracking-wide); } .ds-track-title { font-family: var(--font-display); font-weight: 700; font-size: 1rem; color: var(--ink-1); } .ds-track-note { display: block; font-size: var(--text-body-sm); color: var(--ink-3); }"
+		}
+	],
+	"narrative": {
+		"northStar": "After Last Call",
+		"overview": "The site is the bar after closing. The chairs are up, the room has gone dark, and one warm light is still on. Almost everything is warm black, and the album photograph supplies the atmosphere. Ember orange is the single lit object in the room: it marks the thing to do next, usually \"Listen.\" Copy is set in cream on black and reads like a menu card held up to that light. The tone is quiet, worn and a little smoky, never loud.\n\nThe pages are sparse. There is a lot of black space, few elements, and one clear action per view. Hierarchy comes from tall condensed headlines, letter-spaced uppercase labels and hairline rules, not from boxes and colour blocks. The album cover is the only image and the only source of texture. Everything else stays out of its way.\n\nThe system rejects two looks outright. It is not neon or synthwave: no cool electric hues and no glowing tubes. It is not Americana kitsch: no barbed wire, whiskey barrels, rope type or guitar clip art. The mood comes from the actual record, not from blues iconography.",
+		"keyCharacteristics": [
+			"Warm near-black ground. No neutral greys and no pure black.",
+			"One saturated accent, ember orange, reserved for action and the current state.",
+			"Tall condensed display type. Small, widely tracked uppercase labels.",
+			"Hairline borders and tonal steps carry the structure. Shadows are rare.",
+			"The album artwork is the hero image and the colour source."
+		],
+		"rules": [
+			{
+				"name": "The One Ember Rule",
+				"body": "Ember orange is the only saturated hue on the page, and it always means \"this is the action\" or \"you are here.\" Never use it as decoration, as a section background or on more than one button per group.",
+				"section": "colors"
+			},
+			{
+				"name": "The Warm Black Rule",
+				"body": "Every neutral leans warm (yellow-brown). Don't introduce cool greys, blue-blacks or `#000`. The hero title's pure white is the single exception.",
+				"section": "colors"
+			},
+			{
+				"name": "The Hairline Gradient Rule",
+				"body": "The ember gradient (rust to ember to a dusty gold, `#e0b467`) appears only as a 1px line at reduced opacity: the section rule (35%) and the top edge of the contact form (75%). It never fills a surface or sets text.",
+				"section": "colors"
+			},
+			{
+				"name": "The Condensed Voice Rule",
+				"body": "Every heading is Barlow Condensed 700. Bebas Neue belongs to the wordmark and Roboto Slab to the footer mark. Neither spreads to other text.",
+				"section": "typography"
+			},
+			{
+				"name": "The Tracked Caps Rule",
+				"body": "Uppercase text is always letter-spaced: 0.06em for buttons and metadata, 0.22em for labels and nav. Body copy and headlines (other than the hero) stay in sentence case.",
+				"section": "typography"
+			},
+			{
+				"name": "The Dark Room Rule",
+				"body": "Build separation with a tonal step or a hairline first. A soft shadow is for content that should feel lifted off the table, such as the record sleeve or the form. Don't put one on every card.",
+				"section": "elevation"
+			}
+		],
+		"dos": [
+			"**Do** keep page grounds Last-Call Black (`#0a0a08`) and raised surfaces Blackened Wood (`#171713`), with 1px Old Varnish hairlines between them.",
+			"**Do** spend Ember Orange on one action or one current state per view. Use Ember Glow (`#e5865f`) when the accent has to carry small text.",
+			"**Do** set headings in Barlow Condensed 700 and any uppercase text with tracking (0.06em or 0.22em).",
+			"**Do** let the album artwork carry the imagery. A new image must come from the record's world, approved by the artist.",
+			"**Do** keep text at Ash Tan (`#8d806e`) or brighter, and keep the 2px Ember Glow focus outline on every interactive element.",
+			"**Do** honour `prefers-reduced-motion`. The global stylesheet already reduces all transitions to near zero."
+		],
+		"donts": [
+			"**Don't** use neon or synthwave styling: no electric blues or magentas, no glowing tube effects and no cool-toned glows. The legacy `.badge-blue` class name is ember-coloured. Don't take it as permission for blue.",
+			"**Don't** use Americana kitsch: no barbed wire, whiskey barrels, distressed rope or Western type, guitar clip art or wood-grain textures standing in for the album's photography.",
+			"**Don't** set text in Wet-Brick Rust (2.0:1) or small text in Ember Orange on Blackened Wood panels (4.4:1).",
+			"**Don't** introduce cool greys, blue-blacks or pure `#000`.",
+			"**Don't** use the ember gradient as a fill or as text. It is a 1px hairline only.",
+			"**Don't** add new display faces. Bebas Neue stays on the wordmark and Roboto Slab on the footer mark."
+		]
+	}
+}
